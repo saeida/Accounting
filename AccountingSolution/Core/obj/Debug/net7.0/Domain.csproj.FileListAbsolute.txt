@@ -1,0 +1,12 @@
+F:\project\Mohsen\Accounting\AccountingSolution\Core\bin\Debug\net7.0\Domain.deps.json
+F:\project\Mohsen\Accounting\AccountingSolution\Core\bin\Debug\net7.0\Domain.dll
+F:\project\Mohsen\Accounting\AccountingSolution\Core\bin\Debug\net7.0\Domain.pdb
+F:\project\Mohsen\Accounting\AccountingSolution\Core\obj\Debug\net7.0\Domain.csproj.AssemblyReference.cache
+F:\project\Mohsen\Accounting\AccountingSolution\Core\obj\Debug\net7.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+F:\project\Mohsen\Accounting\AccountingSolution\Core\obj\Debug\net7.0\Domain.AssemblyInfoInputs.cache
+F:\project\Mohsen\Accounting\AccountingSolution\Core\obj\Debug\net7.0\Domain.AssemblyInfo.cs
+F:\project\Mohsen\Accounting\AccountingSolution\Core\obj\Debug\net7.0\Domain.csproj.CoreCompileInputs.cache
+F:\project\Mohsen\Accounting\AccountingSolution\Core\obj\Debug\net7.0\Domain.dll
+F:\project\Mohsen\Accounting\AccountingSolution\Core\obj\Debug\net7.0\refint\Domain.dll
+F:\project\Mohsen\Accounting\AccountingSolution\Core\obj\Debug\net7.0\Domain.pdb
+F:\project\Mohsen\Accounting\AccountingSolution\Core\obj\Debug\net7.0\ref\Domain.dll
