@@ -86,3 +86,5 @@ F:\project\Mohsen\Accounting\AccountingSolution\WebAPI\obj\Debug\net7.0\refint\W
 F:\project\Mohsen\Accounting\AccountingSolution\WebAPI\obj\Debug\net7.0\WebAPI.pdb
 F:\project\Mohsen\Accounting\AccountingSolution\WebAPI\obj\Debug\net7.0\WebAPI.genruntimeconfig.cache
 F:\project\Mohsen\Accounting\AccountingSolution\WebAPI\obj\Debug\net7.0\ref\WebAPI.dll
+F:\project\Mohsen\Accounting\AccountingSolution\WebAPI\bin\Debug\net7.0\Domain.dll
+F:\project\Mohsen\Accounting\AccountingSolution\WebAPI\bin\Debug\net7.0\Domain.pdb

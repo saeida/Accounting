@@ -12,3 +12,6 @@ F:\project\Mohsen\Accounting\AccountingSolution\Infrastructure\obj\Debug\net7.0\
 F:\project\Mohsen\Accounting\AccountingSolution\Infrastructure\obj\Debug\net7.0\Infrastructure.pdb
 F:\project\Mohsen\Accounting\AccountingSolution\Infrastructure\obj\Debug\net7.0\Infrastructure.genruntimeconfig.cache
 F:\project\Mohsen\Accounting\AccountingSolution\Infrastructure\obj\Debug\net7.0\ref\Infrastructure.dll
+F:\project\Mohsen\Accounting\AccountingSolution\Infrastructure\bin\Debug\net7.0\Domain.dll
+F:\project\Mohsen\Accounting\AccountingSolution\Infrastructure\bin\Debug\net7.0\Domain.pdb
+F:\project\Mohsen\Accounting\AccountingSolution\Infrastructure\obj\Debug\net7.0\Infrastructure.csproj.CopyComplete
