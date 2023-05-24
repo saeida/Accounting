@@ -10,3 +10,6 @@ F:\project\Mohsen\Accounting\AccountingSolution\Application\obj\Debug\net7.0\App
 F:\project\Mohsen\Accounting\AccountingSolution\Application\obj\Debug\net7.0\refint\Application.dll
 F:\project\Mohsen\Accounting\AccountingSolution\Application\obj\Debug\net7.0\Application.pdb
 F:\project\Mohsen\Accounting\AccountingSolution\Application\obj\Debug\net7.0\ref\Application.dll
+F:\project\Mohsen\Accounting\AccountingSolution\Application\bin\Debug\net7.0\Domain.dll
+F:\project\Mohsen\Accounting\AccountingSolution\Application\bin\Debug\net7.0\Domain.pdb
+F:\project\Mohsen\Accounting\AccountingSolution\Application\obj\Debug\net7.0\Application.csproj.CopyComplete

@@ -1,14 +1,14 @@
-﻿using System;
+﻿using MediatR;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Domain.Model
+namespace Application.Customer.Commands.CreateCustomer
 {
-    public partial class CustomerModel
+    public class CreateCustomerCommand : IRequest<Int64>
     {
-        public long Id { get; set; }
         public string Firstname { get; set; }
         public string Lastname { get; set; }
         public DateTime? DateOfBirth { get; set; }

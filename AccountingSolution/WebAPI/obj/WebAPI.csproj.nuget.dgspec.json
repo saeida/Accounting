@@ -27,7 +27,11 @@
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "F:\\project\\Mohsen\\Accounting\\AccountingSolution\\Core\\Domain.csproj": {
+                "projectPath": "F:\\project\\Mohsen\\Accounting\\AccountingSolution\\Core\\Domain.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
