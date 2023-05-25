@@ -1,4 +1,6 @@
-﻿using FluentValidation;
+﻿using Domain.Interface.Customer;
+using Domain.Interface;
+using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -16,6 +18,9 @@ namespace Application
             var assembly = typeof(DependencyInjection).Assembly;
             services.AddMediatR(configuration => configuration.RegisterServicesFromAssembly(assembly));
             services.AddValidatorsFromAssembly(assembly);
+
+         
+
 
             return services;
         }

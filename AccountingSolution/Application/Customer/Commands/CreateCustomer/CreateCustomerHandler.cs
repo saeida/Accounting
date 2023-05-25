@@ -13,8 +13,8 @@ namespace Application.Customer.Commands.CreateCustomer
 {
     public class CreateCustomerHandler : IRequestHandler<CreateCustomerCommand, Int64>
     {
-        private readonly ICustomerRepository _customerRepository;
-        public CreateCustomerHandler(ICustomerRepository customerRepository)
+        private readonly ICustomerCommandRepository _customerRepository;
+        public CreateCustomerHandler(ICustomerCommandRepository customerRepository)
         {
             _customerRepository = customerRepository;
         }

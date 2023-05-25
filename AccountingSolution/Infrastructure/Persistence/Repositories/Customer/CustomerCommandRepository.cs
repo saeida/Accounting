@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Persistence.Repositories.Customer
 {
-    public class CustomerCommandRepository : CommandRepository<CustomerModel>, ICustomerRepository
+    public class CustomerCommandRepository : CommandRepository<CustomerModel>, ICustomerCommandRepository
     {
         public CustomerCommandRepository(CRUDTESTContext context) : base(context)
         {

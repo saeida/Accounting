@@ -10,11 +10,11 @@ using System.Threading.Tasks;
 
 namespace Application.Customer.Commands.UpdateCustomer
 {
-    public class EditCustomerHandler : IRequestHandler<UpdateCustomerCommand, CustomerModel>
+    public class UpdateCustomerHandler : IRequestHandler<UpdateCustomerCommand, CustomerModel>
     {
-        private readonly ICustomerRepository _customerRepository;
-     
-        public EditCustomerHandler(ICustomerRepository customerRepository, ICustomerRepository customerQueryRepository)
+        private readonly ICustomerCommandRepository _customerRepository;
+
+        public UpdateCustomerHandler(ICustomerCommandRepository customerRepository, ICustomerCommandRepository customerQueryRepository)
         {
             _customerRepository = customerRepository;
           

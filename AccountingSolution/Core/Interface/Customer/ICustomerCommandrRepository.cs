@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Domain.Interface.Customer
 {
-    public interface ICustomerRepository : ICommandRepository<CustomerModel>
+    public interface ICustomerCommandRepository : ICommandRepository<CustomerModel>
     {
 
     }
