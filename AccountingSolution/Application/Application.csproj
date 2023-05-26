@@ -12,11 +12,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Customer\Queries\GetCustomerById\" />
+    <ProjectReference Include="..\Core\Domain.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Core\Domain.csproj" />
+    <Folder Include="Customer\Queries\GetCustomerById\" />
   </ItemGroup>
 
 </Project>

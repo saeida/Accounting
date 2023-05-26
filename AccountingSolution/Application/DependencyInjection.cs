@@ -19,9 +19,6 @@ namespace Application
             services.AddMediatR(configuration => configuration.RegisterServicesFromAssembly(assembly));
             services.AddValidatorsFromAssembly(assembly);
 
-         
-
-
             return services;
         }
     }

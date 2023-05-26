@@ -89,3 +89,5 @@ F:\project\Mohsen\Accounting\AccountingSolution\WebAPI\bin\Debug\net7.0\Infrastr
 F:\project\Mohsen\Accounting\AccountingSolution\WebAPI\bin\Debug\net7.0\Application.pdb
 F:\project\Mohsen\Accounting\AccountingSolution\WebAPI\bin\Debug\net7.0\Infrastructure.pdb
 F:\project\Mohsen\Accounting\AccountingSolution\WebAPI\bin\Debug\net7.0\Domain.pdb
+F:\project\Mohsen\Accounting\AccountingSolution\WebAPI\bin\Debug\net7.0\AutoMapper.dll
+F:\project\Mohsen\Accounting\AccountingSolution\WebAPI\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

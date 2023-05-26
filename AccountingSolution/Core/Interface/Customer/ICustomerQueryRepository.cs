@@ -2,18 +2,29 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Domain.Interface.Customer
 {
-    public interface ICustomerQueryRepository : IQueryRepository<CustomerModel>
+    public interface ICustomerQueryRepository //: IQueryRepository<CustomerModel>
     {
 
-        //Write Method That Not Exists on Generic Interface
+     
 
-        //Task<List<CustomerModel>> GetAllAsync();
-        //Task<CustomerModel> GetByIdAsync(Int64 id);
+        /// <summary>
+        /// بازیابی یک شی با استفاده از شناسه آن
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+       public Task<CustomerModel> GetByIdAsync(Int64 id);
+        /// <summary>
+        /// بازیابی تمامی شی‌های موجود در دیتابیس
+        /// </summary>
+        /// <returns></returns>
+        Task<List<CustomerModel>> GetAllAsync();
+       
 
     }
 }

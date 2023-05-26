@@ -29,8 +29,8 @@ namespace Application.Customer.Commands.CreateCustomer
             cm.BankAccountNumber = request.BankAccountNumber;
             cm.Email = request.Email;
 
-            var newCustomer = await _customerRepository.AddAsync(cm);
-            return newCustomer.Id;
+            var newCustomerId = await _customerRepository.AddAsync(cm);
+            return newCustomerId;
         }
 
      
