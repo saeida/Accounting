@@ -15,8 +15,7 @@ namespace Infrastructure.AutoMapper
         {
             CreateMap<Customer, CustomerModel>();
             CreateMap<CustomerModel, Customer>();
-            CreateMap<List<Customer>, List<CustomerModel>>();
-            CreateMap<List<CustomerModel>, List<Customer>>();
+         
         }
     }
 }
