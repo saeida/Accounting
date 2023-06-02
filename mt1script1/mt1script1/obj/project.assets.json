@@ -1,0 +1,364 @@
+{
+  "version": 3,
+  "targets": {
+    "net7.0": {
+      "GrapevinePlus/3.0.4": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "6.0.6"
+        },
+        "compile": {
+          "lib/net40/GrapevinePlus.dll": {}
+        },
+        "runtime": {
+          "lib/net40/GrapevinePlus.dll": {}
+        }
+      },
+      "log4net/2.0.5": {
+        "type": "package",
+        "compile": {
+          "lib/net45-full/log4net.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net45-full/log4net.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MQL4CSharp/1.0.5887.32522": {
+        "type": "package",
+        "dependencies": {
+          "GrapevinePlus": "3.0.4",
+          "NodaTime": "1.3.1",
+          "SmartThreadPool.dll": "2.2.3",
+          "UnmanagedExports": "1.2.7",
+          "log4net": "2.0.5"
+        },
+        "compile": {
+          "lib/net452/MQL4CSharp.dll": {}
+        },
+        "runtime": {
+          "lib/net452/MQL4CSharp.dll": {}
+        }
+      },
+      "Newtonsoft.Json/6.0.6": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net45/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NodaTime/1.3.1": {
+        "type": "package",
+        "compile": {
+          "lib/net35-Client/NodaTime.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net35-Client/NodaTime.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "SmartThreadPool.dll/2.2.3": {
+        "type": "package",
+        "compile": {
+          "lib/SmartThreadPool.dll": {}
+        },
+        "runtime": {
+          "lib/SmartThreadPool.dll": {}
+        }
+      },
+      "UnmanagedExports/1.2.7": {
+        "type": "package",
+        "compile": {
+          "lib/net/RGiesecke.DllExport.Metadata.dll": {}
+        },
+        "runtime": {
+          "lib/net/RGiesecke.DllExport.Metadata.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "GrapevinePlus/3.0.4": {
+      "sha512": "Kl3jzUbz50QCyOIrTgmqH+2yzhsYowq9RbhnQGT8ckv4qqbTa0egwEu3bvMQJDTNCRURFizMmW6bIDe5Mek7TQ==",
+      "type": "package",
+      "path": "grapevineplus/3.0.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "grapevineplus.3.0.4.nupkg.sha512",
+        "grapevineplus.nuspec",
+        "lib/net40/GrapevinePlus.dll"
+      ]
+    },
+    "log4net/2.0.5": {
+      "sha512": "AEqPZz+v+OikfnR2SqRVdQPnSaLq5y9Iz1CfRQZ9kTKPYCXHG6zYmDHb7wJotICpDLMr/JqokyjiqKAjUKp0ng==",
+      "type": "package",
+      "path": "log4net/2.0.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net10-full/log4net.dll",
+        "lib/net10-full/log4net.xml",
+        "lib/net11-full/log4net.dll",
+        "lib/net11-full/log4net.xml",
+        "lib/net20-full/log4net.dll",
+        "lib/net20-full/log4net.xml",
+        "lib/net35-client/log4net.dll",
+        "lib/net35-client/log4net.xml",
+        "lib/net35-full/log4net.dll",
+        "lib/net35-full/log4net.xml",
+        "lib/net40-client/log4net.dll",
+        "lib/net40-client/log4net.xml",
+        "lib/net40-full/log4net.dll",
+        "lib/net40-full/log4net.xml",
+        "lib/net45-full/log4net.dll",
+        "lib/net45-full/log4net.xml",
+        "log4net.2.0.5.nupkg.sha512",
+        "log4net.nuspec"
+      ]
+    },
+    "MQL4CSharp/1.0.5887.32522": {
+      "sha512": "G8GmUBCpi9BAfcKvxMsSoKEW5l/JDTIEI9fu/sUSBZVuj79mHjmrg76REJmR3LQOkcZn1MQEL96e99VzQI8V/g==",
+      "type": "package",
+      "path": "mql4csharp/1.0.5887.32522",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net452/MQL4CSharp.dll",
+        "mql4csharp.1.0.5887.32522.nupkg.sha512",
+        "mql4csharp.nuspec"
+      ]
+    },
+    "Newtonsoft.Json/6.0.6": {
+      "sha512": "w26uZNyCG5VeoKiEOJ4+9/o8koSofLKwHl7WLreIcp0U6r57L7WiRXmjp8MTKFw6dYNZ9AE0lw69WYbIhUsU9Q==",
+      "type": "package",
+      "path": "newtonsoft.json/6.0.6",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/netcore45/Newtonsoft.Json.dll",
+        "lib/netcore45/Newtonsoft.Json.xml",
+        "lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.xml",
+        "lib/portable-net45+wp80+win8+wpa81+aspnetcore50/Newtonsoft.Json.dll",
+        "lib/portable-net45+wp80+win8+wpa81+aspnetcore50/Newtonsoft.Json.xml",
+        "newtonsoft.json.6.0.6.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "tools/install.ps1"
+      ]
+    },
+    "NodaTime/1.3.1": {
+      "sha512": "qAEVNG9I/kbTC+ClG3vxW+J487YURJbR7lyKCgxSPak04OP0l6lfdbz4XgxbQC28rQMzbBvVFTUovZxrLHRLXA==",
+      "type": "package",
+      "path": "nodatime/1.3.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net35-Client/NodaTime.dll",
+        "lib/net35-Client/NodaTime.xml",
+        "lib/portable-net4+sl5+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1+XamariniOS1/NodaTime.dll",
+        "lib/portable-net4+sl5+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1+XamariniOS1/NodaTime.xml",
+        "nodatime.1.3.1.nupkg.sha512",
+        "nodatime.nuspec"
+      ]
+    },
+    "SmartThreadPool.dll/2.2.3": {
+      "sha512": "voFYaqBeorulCuhwEll8rqRvBgHrRXbyJwOipuRnSLEA9KKOwArBRIBKPTHn1rlXg+/ca4kPkhHBHgtgNFVlzA==",
+      "type": "package",
+      "path": "smartthreadpool.dll/2.2.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/SmartThreadPool.dll",
+        "lib/SmartThreadPool.pdb",
+        "smartthreadpool.dll.2.2.3.nupkg.sha512",
+        "smartthreadpool.dll.nuspec"
+      ]
+    },
+    "UnmanagedExports/1.2.7": {
+      "sha512": "bPIbzFaAj4AFxjHGFGPrYnUSCyIWJMkT/LFuiphWdpUbO2L9fP68W/1SP9cHCAxgiekV+kFNbybA2VvRo8PYIQ==",
+      "type": "package",
+      "path": "unmanagedexports/1.2.7",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net/RGiesecke.DllExport.Metadata.dll",
+        "tools/DllExportCmdLets.psm1",
+        "tools/Mono.Cecil.dll",
+        "tools/RGiesecke.DllExport.MSBuild.dll",
+        "tools/RGiesecke.DllExport.MSBuild.pdb",
+        "tools/RGiesecke.DllExport.dll",
+        "tools/RGiesecke.DllExport.pdb",
+        "tools/RGiesecke.DllExport.targets",
+        "tools/init.ps1",
+        "tools/install.ps1",
+        "tools/uninstall.ps1",
+        "unmanagedexports.1.2.7.nupkg.sha512",
+        "unmanagedexports.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net7.0": [
+      "MQL4CSharp >= 1.0.5887.32522"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\atefi\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "F:\\project\\Mohsen\\Accounting\\mt1script1\\mt1script1\\mt1script1.csproj",
+      "projectName": "mt1script1",
+      "projectPath": "F:\\project\\Mohsen\\Accounting\\mt1script1\\mt1script1\\mt1script1.csproj",
+      "packagesPath": "C:\\Users\\atefi\\.nuget\\packages\\",
+      "outputPath": "F:\\project\\Mohsen\\Accounting\\mt1script1\\mt1script1\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\atefi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net7.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net7.0": {
+        "targetAlias": "net7.0",
+        "dependencies": {
+          "MQL4CSharp": {
+            "target": "Package",
+            "version": "[1.0.5887.32522, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+      }
+    }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'GrapevinePlus 3.0.4' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "GrapevinePlus",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'log4net 2.0.5' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "log4net",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'MQL4CSharp 1.0.5887.32522' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "MQL4CSharp",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Newtonsoft.Json 6.0.6' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Newtonsoft.Json",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'NodaTime 1.3.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "NodaTime",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'SmartThreadPool.dll 2.2.3' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "SmartThreadPool.dll",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'UnmanagedExports 1.2.7' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "UnmanagedExports",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    }
+  ]
+}

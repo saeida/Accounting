@@ -1,5 +1,6 @@
 using Application;
 using Infrastructure;
+using Serilog;
 
 namespace WebAPI
 {
@@ -20,7 +21,8 @@ namespace WebAPI
             builder.Services.AddSwaggerGen();
 
         
-          //  builder.Host.UseSerilog((context, configuration) => configuration.ReadFrom.Configuration(context.Configuration));
+            builder.Host.UseSerilog((context, configuration) => configuration.ReadFrom.Configuration(context.Configuration));
+
 
             var app = builder.Build();
 

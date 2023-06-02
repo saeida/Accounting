@@ -31,7 +31,7 @@ namespace Infrastructure
             services.AddScoped<ICustomerQueryRepository, CustomerQueryRepository>();          
             services.AddScoped<ICustomerCommandRepository, CustomerCommandRepository>();
             services.AddAutoMapper(assembly);
-
+        
             return services;
         }
     }

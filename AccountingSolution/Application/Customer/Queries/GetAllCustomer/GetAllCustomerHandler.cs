@@ -21,6 +21,7 @@ namespace Application.Customer.Queries.GetAllCustomer
         }
         public async Task<List<CustomerModel>> Handle(GetAllCustomerQuery request, CancellationToken cancellationToken)
         {
+            throw new Exception("هیچ کاربری وجود ندارد");
             return (List<CustomerModel>)await _customerQueryRepository.GetAllAsync();
         }
     }
