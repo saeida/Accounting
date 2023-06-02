@@ -1,6 +1,7 @@
 using Application;
 using Infrastructure;
 using Serilog;
+using WebAPI.Middlewares;
 
 namespace WebAPI
 {
@@ -25,6 +26,10 @@ namespace WebAPI
 
 
             var app = builder.Build();
+
+
+
+           app.UseMiddleware<ExceptionMiddleware>();
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())

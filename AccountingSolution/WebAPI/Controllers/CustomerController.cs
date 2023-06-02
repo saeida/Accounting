@@ -3,10 +3,13 @@ using Application.Customer.Queries.GetAllCustomer;
 using Domain.Model.Customer;
 using MediatR;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Serilog;
 using Serilog.Events;
 using System;
+using WebAPI.Model;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace WebAPI.Controllers
 {
@@ -62,7 +65,31 @@ namespace WebAPI.Controllers
             //    AND Properties.value('(/properties/property[@key="contact"]/structure[@type="Contact"]/property[@key="ContactId"])[1]', 'nvarchar(max)') = 'f7d10f53-4c11-44f4-8dce-d0e0e22cb6ab'
 
 
-            return await _mediator.Send(new GetAllCustomerQuery());
+
+            //try
+            //{           
+            //    // دستوراتی برای دریافت داده
+            //    return Ok(  await _mediator.Send(new GetAllCustomerQuery()));
+            //}
+            //catch (Exception ex)
+            //{
+            //    var error = new MessageResult<object>
+            //    {
+            //        Data = null,
+            //        Message = "خطایی در هنگام اجرای عملیات رخ داده است.",
+            //        StackTrace=ex.StackTrace,
+            //        StatusCode="500"
+            //    };
+
+            //    return new ObjectResult(error)
+            //    {
+            //        StatusCode = 500
+            //    };
+            //}
+
+            HttpContext.Items["data"] = await _mediator.Send(new GetAllCustomerQuery());
+
+               return Ok( );
         }
 
 

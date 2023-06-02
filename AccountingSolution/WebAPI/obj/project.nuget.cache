@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "MU9NMJak+KzlBQoXRDMWaDHhAoK4J2/dW3WR/s7h/o4b5fHFUiOK+QO7CYtDy+JYqumkdfPiJTsRhjdfSRBUpQ==",
+  "dgSpecHash": "7sDP6NQbix2NEHIoE5zkztEqAOp2AOoJ2qYzTorZCXZEf2GJmx/4k+wwvalk3XMTOqYDhAkT6hHoEPon+rrQtw==",
   "success": true,
   "projectFilePath": "F:\\project\\Mohsen\\Accounting\\AccountingSolution\\WebAPI\\WebAPI.csproj",
   "expectedPackageFiles": [
@@ -53,6 +53,7 @@
     "C:\\Users\\atefi\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.17.0\\microsoft.visualstudio.azure.containers.tools.targets.1.17.0.nupkg.sha512",
     "C:\\Users\\atefi\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
     "C:\\Users\\atefi\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
+    "C:\\Users\\atefi\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\atefi\\.nuget\\packages\\serilog\\2.12.0\\serilog.2.12.0.nupkg.sha512",
     "C:\\Users\\atefi\\.nuget\\packages\\serilog.aspnetcore\\7.0.0\\serilog.aspnetcore.7.0.0.nupkg.sha512",
     "C:\\Users\\atefi\\.nuget\\packages\\serilog.extensions.hosting\\7.0.0\\serilog.extensions.hosting.7.0.0.nupkg.sha512",
