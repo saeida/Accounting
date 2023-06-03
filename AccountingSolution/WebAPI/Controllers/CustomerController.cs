@@ -5,9 +5,11 @@ using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Localization;
 using Serilog;
 using Serilog.Events;
 using System;
+using System.Globalization;
 using WebAPI.Model;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
@@ -17,7 +19,7 @@ namespace WebAPI.Controllers
     [ApiController]
     public class CustomerController : ControllerBase
     {
-
+    
         private readonly IMediator _mediator;
         public CustomerController(IMediator mediator)
         {
@@ -46,10 +48,22 @@ namespace WebAPI.Controllers
         [Route("GetAllCustomerQuery")]
         public async Task<ActionResult<List<CustomerModel>>> GetAllCustomerQuery()
         {
-            Log.Information("Getting the Test running...");
-            var Count = 10;
-            Log.Error("Customer Number Is  {@Count} retrieved from DB", Count);
-            Log.ForContext("UserId", "101").Information("Log message");
+            //Log.Information("Getting the Test running...");
+            //var Count = 10;
+            //Log.Error("Customer Number Is  {@Count} retrieved from DB", Count);
+            //Log.ForContext("UserId", "101").Information("Log message");
+           // var culture = HttpContext.Request.Headers["Accept-Language"].ToString();
+
+            // Set the current culture of the thread
+           /// CultureInfo.CurrentCulture = CultureInfo.GetCultureInfo(culture);
+           // CultureInfo.CurrentUICulture = CultureInfo.GetCultureInfo(culture);
+
+            HttpContext.Items["data"] = await _mediator.Send(new GetAllCustomerQuery());
+
+            return Ok();
+
+
+            #region Other Sample
 
             // Log.Error(exception, "An error occurred for user {UserName} ({UserId}) from IP address {UserIp}", userName, userId, userIp);
 
@@ -87,9 +101,9 @@ namespace WebAPI.Controllers
             //    };
             //}
 
-            HttpContext.Items["data"] = await _mediator.Send(new GetAllCustomerQuery());
 
-               return Ok( );
+            #endregion
+
         }
 
 

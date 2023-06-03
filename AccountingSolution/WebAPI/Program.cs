@@ -1,6 +1,8 @@
 using Application;
 using Infrastructure;
+using Microsoft.AspNetCore.Localization;
 using Serilog;
+using System.Globalization;
 using WebAPI.Middlewares;
 
 namespace WebAPI
@@ -13,23 +15,40 @@ namespace WebAPI
 
             // Add services to the container.
 
+
+            // Set the default culture of the application
+            var defaultCulture = new CultureInfo("fa-IR");
+            CultureInfo.DefaultThreadCurrentCulture = defaultCulture;
+            CultureInfo.DefaultThreadCurrentUICulture = defaultCulture;
+
             builder.Services.AddControllers();
 
             builder.Services.AddInfrastructure().AddApplication();
+
+
+          //  builder.Services.AddHttpClient("MyHttpClient").AddHttpMessageHandler(() => new HeaderHandler("Accept-Language", "fa-IR"));
 
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
-        
+            // Add IHttpContextAccessor to the service collection
+            builder.Services.AddHttpContextAccessor();
+
+          
+
+
+         
+
+
             builder.Host.UseSerilog((context, configuration) => configuration.ReadFrom.Configuration(context.Configuration));
 
 
             var app = builder.Build();
 
+          
 
-
-           app.UseMiddleware<ExceptionMiddleware>();
+            app.UseMiddleware<ExceptionMiddleware>();
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())

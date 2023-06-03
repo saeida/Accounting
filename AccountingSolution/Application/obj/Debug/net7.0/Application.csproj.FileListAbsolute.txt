@@ -15,8 +15,8 @@ F:\project\Mohsen\Accounting\AccountingSolution\Application\bin\Debug\net7.0\Dom
 F:\project\Mohsen\Accounting\AccountingSolution\Application\obj\Debug\net7.0\Application.csproj.CopyComplete
 F:\project\Mohsen\Accounting\AccountingSolution\Application\bin\Debug\net7.0\en-US\Application.resources.dll
 F:\project\Mohsen\Accounting\AccountingSolution\Application\bin\Debug\net7.0\fa-IR\Application.resources.dll
-F:\project\Mohsen\Accounting\AccountingSolution\Application\obj\Debug\net7.0\Application.Resources.Message.en-US.resources
-F:\project\Mohsen\Accounting\AccountingSolution\Application\obj\Debug\net7.0\Application.Resources.Message.fa-IR.resources
 F:\project\Mohsen\Accounting\AccountingSolution\Application\obj\Debug\net7.0\Application.csproj.GenerateResource.cache
 F:\project\Mohsen\Accounting\AccountingSolution\Application\obj\Debug\net7.0\en-US\Application.resources.dll
 F:\project\Mohsen\Accounting\AccountingSolution\Application\obj\Debug\net7.0\fa-IR\Application.resources.dll
+F:\project\Mohsen\Accounting\AccountingSolution\Application\obj\Debug\net7.0\Application.Resources.Message.en-US.resources
+F:\project\Mohsen\Accounting\AccountingSolution\Application\obj\Debug\net7.0\Application.Resources.Message.fa-IR.resources

@@ -2,26 +2,39 @@
 using Domain.Interface.Customer;
 using Domain.Model.Customer;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
+using System.Globalization;
+using System.Reflection;
+using System.Resources;
 
 namespace Application.Customer.Queries.GetAllCustomer
 {
     public class GetAllCustomerHandler : IRequestHandler<GetAllCustomerQuery, List<CustomerModel>>
     {
-        private readonly ICustomerQueryRepository _customerQueryRepository;
-
-        public GetAllCustomerHandler(ICustomerQueryRepository customerQueryRepository)
+        private readonly ICustomerQueryRepository _customerQueryRepository;    
+        private readonly IHttpContextAccessor _httpContextAccessor;
+        public GetAllCustomerHandler(ICustomerQueryRepository customerQueryRepository, IHttpContextAccessor httpContextAccessor)
         {
             _customerQueryRepository = customerQueryRepository;
+            _httpContextAccessor = httpContextAccessor;
+
         }
         public async Task<List<CustomerModel>> Handle(GetAllCustomerQuery request, CancellationToken cancellationToken)
         {
-            throw new Exception("هیچ کاربری وجود ندارد");
+
+            // Get the current culture from the request headers
+            var culture = _httpContextAccessor.HttpContext.Request.Headers["Accept-Language"].ToString();
+            culture = culture.Split(",")[0];
+            // Set the current culture of the thread
+            CultureInfo.CurrentCulture = CultureInfo.GetCultureInfo(culture);
+            CultureInfo.CurrentUICulture = CultureInfo.GetCultureInfo(culture);
+         
+
+            var resourceManager = new ResourceManager("Application.Resources.Message", Assembly.GetExecutingAssembly());
+            var message = resourceManager.GetString("CustomerNotExist", CultureInfo.CurrentCulture);
+         
+            throw new Exception(message);
+
             return (List<CustomerModel>)await _customerQueryRepository.GetAllAsync();
         }
     }
