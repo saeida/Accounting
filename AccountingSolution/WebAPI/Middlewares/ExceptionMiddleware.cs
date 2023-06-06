@@ -53,7 +53,7 @@ namespace WebAPI.Middlewares
 
                 MessageResult<object> returnResult = null;
             LogContext.PushProperty("UserId", "123");
-            Log.Error(exception,"Status Code Is   {@StatusCode} - Error Message Is {@Message}  retrieved from DB", context.Response.StatusCode, exception.Message);
+            Log.Error(exception,"Status Code Is   {@StatusCode} - Error Message Is {@Message} ", context.Response.StatusCode, exception.Message);
 
             returnResult = new MessageResult<object>
             {

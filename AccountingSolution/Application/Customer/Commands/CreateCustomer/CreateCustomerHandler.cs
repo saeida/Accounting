@@ -1,6 +1,7 @@
 ﻿
 using Domain.Interface.Customer;
 using Domain.Model.Customer;
+using FluentValidation;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -18,16 +19,30 @@ namespace Application.Customer.Commands.CreateCustomer
         {
             _customerRepository = customerRepository;
         }
-        public async Task<Int64> Handle(CreateCustomerCommand request, CancellationToken cancellationToken)
+        public async Task<Int64> Handle(CreateCustomerCommand command, CancellationToken cancellationToken)
         {
             CustomerModel cm = new CustomerModel();
-            cm.Firstname = request.Firstname;
-            cm.Firstname = request.Firstname;
-            cm.Lastname = request.Lastname;
-            cm.PhoneNumber = request.PhoneNumber;
-            cm.DateOfBirth = request.DateOfBirth;
-            cm.BankAccountNumber = request.BankAccountNumber;
-            cm.Email = request.Email;
+            cm.Firstname = command.Firstname;
+            cm.Firstname = command.Firstname;
+            cm.Lastname = command.Lastname;
+            cm.PhoneNumber = command.PhoneNumber;
+            cm.DateOfBirth = command.DateOfBirth;
+            cm.BankAccountNumber = command.BankAccountNumber;
+            cm.Email = command.Email;
+
+
+            var validator = new CreateCustomerValidation();
+            var validationResult = await validator.ValidateAsync(command);
+
+            if (!validationResult.IsValid)
+            {
+                throw new ValidationException(validationResult.ToString());
+            }
+
+
+            //var validator = new CreateCustomerValidation(_bookRepository);
+            //await validator.ValidateAndThrowAsync(command);
+
 
             var newCustomerId = await _customerRepository.AddAsync(cm);
             return newCustomerId;
