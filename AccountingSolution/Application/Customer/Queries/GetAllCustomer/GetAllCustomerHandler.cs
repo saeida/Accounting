@@ -22,12 +22,14 @@ namespace Application.Customer.Queries.GetAllCustomer
         public async Task<List<CustomerModel>> Handle(GetAllCustomerQuery request, CancellationToken cancellationToken)
         {
 
-            // Get the current culture from the request headers
-            var culture = _httpContextAccessor.HttpContext.Request.Headers["Accept-Language"].ToString();
-            culture = culture.Split(",")[0];
-            // Set the current culture of the thread
-            CultureInfo.CurrentCulture = CultureInfo.GetCultureInfo(culture);
-            CultureInfo.CurrentUICulture = CultureInfo.GetCultureInfo(culture);
+        
+
+            ////// Get the current culture from the request headers
+            //var culture = _httpContextAccessor.HttpContext.Request.Headers["Accept-Language"].ToString();
+            //culture = culture.Split(",")[0];
+            ////// Set the current culture of the thread
+            //CultureInfo.CurrentCulture = CultureInfo.GetCultureInfo(culture);
+
          
 
             var resourceManager = new ResourceManager("Application.Resources.Message", Assembly.GetExecutingAssembly());

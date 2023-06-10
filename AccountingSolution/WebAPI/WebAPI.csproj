@@ -22,4 +22,12 @@
     <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <EditorConfigFiles Remove="F:\project\Mohsen\Accounting\AccountingSolution\WebAPI\.editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="F:\project\Mohsen\Accounting\AccountingSolution\WebAPI\.editorconfig" />
+  </ItemGroup>
+
 </Project>

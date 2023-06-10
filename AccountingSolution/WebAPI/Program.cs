@@ -1,4 +1,5 @@
 using Application;
+using FluentValidation;
 using Infrastructure;
 using Microsoft.AspNetCore.Localization;
 using Serilog;
@@ -15,11 +16,15 @@ namespace WebAPI
 
             // Add services to the container.
 
-
+          
             // Set the default culture of the application
             var defaultCulture = new CultureInfo("fa-IR");
             CultureInfo.DefaultThreadCurrentCulture = defaultCulture;
             CultureInfo.DefaultThreadCurrentUICulture = defaultCulture;
+
+            // Set the language for error messages
+            //ValidatorOptions.LanguageManager.Culture = new CultureInfo("en-US");
+
 
             builder.Services.AddControllers();
 
@@ -44,9 +49,11 @@ namespace WebAPI
             builder.Host.UseSerilog((context, configuration) => configuration.ReadFrom.Configuration(context.Configuration));
 
 
-            var app = builder.Build();
+
+        var app = builder.Build();
 
           
+
 
             app.UseMiddleware<ExceptionMiddleware>();
 
