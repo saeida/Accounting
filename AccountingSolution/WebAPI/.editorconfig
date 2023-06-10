@@ -1,0 +1,4 @@
+dotnet_naming_rule.controller_name_with_suffix.severity = error
+dotnet_naming_rule.controller_name_with_suffix.symbols = controllers
+dotnet_naming_rule.controller_name_with_suffix.style = suffix
+dotnet_naming_rule.controller_name_with_suffix.suffix = Controller

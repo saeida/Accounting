@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <Folder Include="Customer\Queries\GetCustomerById\" />
+    <Folder Include="Customer\Queries\GetCustomer\" />
   </ItemGroup>
 
 </Project>
