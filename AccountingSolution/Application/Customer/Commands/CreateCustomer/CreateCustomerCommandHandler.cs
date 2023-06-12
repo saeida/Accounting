@@ -12,10 +12,10 @@ using System.Threading.Tasks;
 
 namespace Application.Customer.Commands.CreateCustomer
 {
-    public class CreateCustomerHandler : IRequestHandler<CreateCustomerCommand, Int64>
+    public class CreateCustomerCommandHandler : IRequestHandler<CreateCustomerCommand, Int64>
     {
         private readonly ICustomerCommandRepository _customerRepository;
-        public CreateCustomerHandler(ICustomerCommandRepository customerRepository)
+        public CreateCustomerCommandHandler(ICustomerCommandRepository customerRepository)
         {
             _customerRepository = customerRepository;
         }
@@ -31,7 +31,7 @@ namespace Application.Customer.Commands.CreateCustomer
             cm.Email = command.Email;
 
 
-            var validator = new CreateCustomerValidation();
+            var validator = new CreateCustomerCommandValidation();
             var validationResult = await validator.ValidateAsync(command);
 
             if (!validationResult.IsValid)

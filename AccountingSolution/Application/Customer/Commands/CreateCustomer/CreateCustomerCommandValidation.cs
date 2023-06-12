@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Application.Customer.Commands.CreateCustomer
 {
-    public class CreateCustomerValidation: AbstractValidator<CreateCustomerCommand>
+    public class CreateCustomerCommandValidation: AbstractValidator<CreateCustomerCommand>
     {
 
         //   private readonly IBookRepository _bookRepository;
@@ -16,7 +16,7 @@ namespace Application.Customer.Commands.CreateCustomer
         //{
         //    _bookRepository = bookRepository;
         //}
-        public CreateCustomerValidation()
+        public CreateCustomerCommandValidation()
         {
             RuleFor(x => x.PhoneNumber).NotEmpty();
             RuleFor(x => x.BankAccountNumber).MinimumLength(2);

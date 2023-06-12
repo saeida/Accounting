@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Hosting;
 using NetArchTest.Rules;
 using Xunit;
 using NetArchTest.Rules.Extensions;
+using Microsoft.EntityFrameworkCore;
 
 namespace Architecture.Tests
 {
@@ -139,7 +140,6 @@ namespace Architecture.Tests
         }
 
 
-
         [Fact]
         public void Infrastructure_Shoud_Not_HaveDependencyOnOtherProject()
         {
@@ -171,19 +171,14 @@ namespace Architecture.Tests
         }
 
 
-
         [Fact]
         public void Controller_Shoud_HaveDependencyOnMediatR()
         {
             //Arrange
-
             var assembly = typeof(WebAPI.Program).Assembly;
 
 
             //Act
-
-
-
             var testResult = Types.InAssembly(assembly)
                  .That()
                  .HaveNameEndingWith("Controller")
@@ -193,8 +188,6 @@ namespace Architecture.Tests
 
 
             //Assert
-
-
             Assert.True(testResult.IsSuccessful);
         }
 
@@ -219,6 +212,122 @@ namespace Architecture.Tests
               Assert.True(testResult.IsSuccessful);
         }
 
+
+        //CommandHandlers_ShouldNot_CallQueryHandlers
+        //QueryHandlers_ShouldNot_CallCommandHandlers
+        //DomainLayer_ShouldEnforceBusinessRules
+        //Commands_ShouldHaveCommandSuffix
+        //Commands_ShouldHaveOnlyOneHandler
+        //Queries_ShouldHaveOnlyOneHandler
+        //Handlers_ShouldHaveOnlyOneResponsibility
+        //Commands_ShouldValidateInput
+        //Queries_ShouldNotChangeState
+        //Commands_ShouldChangeState
+        //Queries_ShouldReturnDataTransferObjects4
+
+
+        [Fact]
+        public void QueryHandlers_Should_ResideInQueriesNameSpace()
+        {
+                        
+            //Arrange
+            var assembly = typeof(Application.DependencyInjection).Assembly;
+
+
+            //Act
+            var testResult = Types.InAssembly(assembly)
+                   .That()
+                   .AreClasses().And()
+                   .HaveNameEndingWith("QueryHandler")
+                   .Should()
+                  .ResideInNamespaceContaining("Queries")                                
+                   .GetResult();
+
+
+            //Assert
+            Assert.True(testResult.IsSuccessful);
+
+        }
+
+
+        [Fact]
+        public void CommandHandlers_Should_ResideInCommandsNameSpace()
+        {
+
+            //Arrange
+            var assembly = typeof(Application.DependencyInjection).Assembly;
+
+
+            //Act
+            var testResult = Types.InAssembly(assembly)
+                   .That()
+                   .AreClasses().And()
+                   .HaveNameEndingWith("CommandHandler")
+                   .Should()
+                  .ResideInNamespaceContaining("Commands")
+                   .GetResult();
+
+
+            //Assert
+            Assert.True(testResult.IsSuccessful);
+
+        }
+
+
+
+        [Fact]
+        public void Interface_Shoud_Startwith_I()
+        {
+            //Arrange
+
+            var assembly = Types.InCurrentDomain();
+
+
+            //Act
+
+            var testResult = assembly
+                .That().AreInterfaces()
+                .Should()
+                .HaveNameStartingWith("I")
+                .GetResult();
+
+
+            //Assert
+
+
+            Assert.True(testResult.IsSuccessful);
+        }
+
+        //[Fact]
+        //public void Repository_Shoud_Endtwith_Repository()
+        //{
+        //    //Arrange
+
+        //    //  var assembly = Types.InCurrentDomain();
+        //    var assembly = typeof(Infrastructure.DependencyInjection).Assembly;
+
+
+        //    //Act
+        //    var testResult = Types.InAssembly(assembly)
+        //        .That().ResideInNamespace("Infrastructure.Persistence.Repositories")
+        //        .And().AreClasses()
+        //        .Should().HaveNameEndingWith("Repository")
+        //        .GetResult();
+
+
+        //    //Assert
+        //    Assert.True(testResult.IsSuccessful);
+        //}
+
+
+
+       
+
+        // Classes that implement IRepository must reside in the Data namespace
+        //result = Types.InCurrentDomain()
+        //        .That().ImplementInterface(typeof(IRepository<>))
+        //        .Should().ResideInNamespace(("NetArchTest.SampleLibrary.Data"))
+        //        .GetResult().IsSuccessful;
     }
 
 }

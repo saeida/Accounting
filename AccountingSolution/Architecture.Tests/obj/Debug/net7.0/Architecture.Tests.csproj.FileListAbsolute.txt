@@ -1,4 +1,9 @@
 F:\project\Mohsen\Accounting\AccountingSolution\Architecture.Tests\bin\Debug\net7.0\CoverletSourceRootsMapping
+F:\project\Mohsen\Accounting\AccountingSolution\Architecture.Tests\obj\Debug\net7.0\Architecture.Tests.csproj.AssemblyReference.cache
+F:\project\Mohsen\Accounting\AccountingSolution\Architecture.Tests\obj\Debug\net7.0\Architecture.Tests.GeneratedMSBuildEditorConfig.editorconfig
+F:\project\Mohsen\Accounting\AccountingSolution\Architecture.Tests\obj\Debug\net7.0\Architecture.Tests.AssemblyInfoInputs.cache
+F:\project\Mohsen\Accounting\AccountingSolution\Architecture.Tests\obj\Debug\net7.0\Architecture.Tests.AssemblyInfo.cs
+F:\project\Mohsen\Accounting\AccountingSolution\Architecture.Tests\obj\Debug\net7.0\Architecture.Tests.csproj.CoreCompileInputs.cache
 F:\project\Mohsen\Accounting\AccountingSolution\Architecture.Tests\bin\Debug\net7.0\testhost.dll
 F:\project\Mohsen\Accounting\AccountingSolution\Architecture.Tests\bin\Debug\net7.0\WebAPI.deps.json
 F:\project\Mohsen\Accounting\AccountingSolution\Architecture.Tests\bin\Debug\net7.0\WebAPI.runtimeconfig.json
@@ -169,11 +174,6 @@ F:\project\Mohsen\Accounting\AccountingSolution\Architecture.Tests\bin\Debug\net
 F:\project\Mohsen\Accounting\AccountingSolution\Architecture.Tests\bin\Debug\net7.0\WebAPI.pdb
 F:\project\Mohsen\Accounting\AccountingSolution\Architecture.Tests\bin\Debug\net7.0\en-US\Application.resources.dll
 F:\project\Mohsen\Accounting\AccountingSolution\Architecture.Tests\bin\Debug\net7.0\fa-IR\Application.resources.dll
-F:\project\Mohsen\Accounting\AccountingSolution\Architecture.Tests\obj\Debug\net7.0\Architecture.Tests.csproj.AssemblyReference.cache
-F:\project\Mohsen\Accounting\AccountingSolution\Architecture.Tests\obj\Debug\net7.0\Architecture.Tests.GeneratedMSBuildEditorConfig.editorconfig
-F:\project\Mohsen\Accounting\AccountingSolution\Architecture.Tests\obj\Debug\net7.0\Architecture.Tests.AssemblyInfoInputs.cache
-F:\project\Mohsen\Accounting\AccountingSolution\Architecture.Tests\obj\Debug\net7.0\Architecture.Tests.AssemblyInfo.cs
-F:\project\Mohsen\Accounting\AccountingSolution\Architecture.Tests\obj\Debug\net7.0\Architecture.Tests.csproj.CoreCompileInputs.cache
 F:\project\Mohsen\Accounting\AccountingSolution\Architecture.Tests\obj\Debug\net7.0\Architecture.Tests.csproj.CopyComplete
 F:\project\Mohsen\Accounting\AccountingSolution\Architecture.Tests\obj\Debug\net7.0\Architecture.Tests.dll
 F:\project\Mohsen\Accounting\AccountingSolution\Architecture.Tests\obj\Debug\net7.0\refint\Architecture.Tests.dll
