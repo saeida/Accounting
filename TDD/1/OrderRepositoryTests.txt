@@ -1,0 +1,17 @@
+public class OrderRepositoryTests
+{
+    [Fact]
+    public async Task SaveOrder_ShouldSaveOrderInDatabase()
+    {
+        // Arrange
+        var mockDbContext = new Mock<OrderDbContext>();
+        var order = new Order { /* Initialize order properties */ };
+        var orderRepository = new OrderRepository(mockDbContext.Object);
+
+        // Act
+        await orderRepository.SaveOrder(order);
+
+        // Assert
+        mockDbContext.Verify(db => db.SaveChangesAsync(), Times.Once);
+    }
+}

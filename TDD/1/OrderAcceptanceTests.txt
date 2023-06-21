@@ -1,0 +1,37 @@
+public class OrderAcceptanceTests
+{
+    private readonly OrderDbContext _dbContext;
+
+    public OrderAcceptanceTests()
+    {
+        // Initialize the database
+        _dbContext = new OrderDbContext();
+        _dbContext.Database.EnsureCreated();
+    }
+
+    [Fact]
+    public async Task CreateNewOrder_ShouldSaveOrderInDatabase()
+    {
+        // Arrange
+        var orderRepository = new OrderRepository(_dbContext);
+        var customer = new Customer { /* Initialize customer properties */ };
+        var product = new Product { /* Initialize product properties */ };
+        var order = new Order { Customer = customer, Product = product, Quantity = 2 };
+
+        // Act
+        await orderRepository.CreateNewOrder(order);
+
+        // Assert
+        var savedOrder = await orderRepository.GetOrderById(order.Id);
+        Assert.Equal(order.Customer.Id, savedOrder.Customer.Id);
+        Assert.Equal(order.Product.Id, savedOrder.Product.Id);
+        Assert.Equal(order.Quantity, savedOrder.Quantity);
+    }
+
+    public void Dispose()
+    {
+        // Clean up the database after the tests have run
+        _dbContext.Database.EnsureDeleted();
+        _dbContext.Dispose();
+    }
+}

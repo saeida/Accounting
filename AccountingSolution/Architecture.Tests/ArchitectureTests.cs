@@ -7,6 +7,7 @@ using NetArchTest.Rules;
 using Xunit;
 using NetArchTest.Rules.Extensions;
 using Microsoft.EntityFrameworkCore;
+using MediatR;
 
 namespace Architecture.Tests
 {
@@ -20,12 +21,15 @@ namespace Architecture.Tests
         [Fact]
         public void Donain_Shoud_Not_HaveDependencyOnOtherProject()
         {
-            //Arrange
+
+            //Method Name Pattern : Method_Scenario_ExpectedBehavior pattern.
+
+            //Arrange : setting up initial state - hese conditions
 
             var assembly = typeof(Domain.Model.Customer.CustomerModel).Assembly;
 
 
-            //Act
+            //Act : invoking the behavior we’re testing - this action is performed
 
             var otherProjects = new[]
             {
@@ -41,7 +45,7 @@ namespace Architecture.Tests
                   .GetResult();
 
 
-            //Assert
+            //Assert : validating the result - this result will occur
 
 
             Assert.True(testResult.IsSuccessful);
@@ -273,7 +277,43 @@ namespace Architecture.Tests
 
         }
 
+        [Fact]
+        public void Commands_Should_HaveCommandSuffix()
+        {
+            //Arrange
+            var assembly = typeof(Application.DependencyInjection).Assembly;
+            var commandType = typeof(IRequest);
 
+            //Act
+            var testResult = Types.InAssembly(assembly)
+                .That()
+                .ImplementInterface(commandType)
+                .Should()
+                .HaveNameEndingWith("Command")
+                .GetResult();
+
+            //Assert
+            Assert.True(testResult.IsSuccessful);
+        }
+
+        [Fact]
+        public void Queries_Should_HaveQuerySuffix()
+        {
+            //Arrange
+            var assembly = typeof(Application.DependencyInjection).Assembly;
+            var commandType = typeof(IRequest);
+
+            //Act
+            var testResult = Types.InAssembly(assembly)
+                .That()
+                .ImplementInterface(commandType)
+                .Should()
+                .HaveNameEndingWith("Query")
+                .GetResult();
+
+            //Assert
+            Assert.True(testResult.IsSuccessful);
+        }
 
         [Fact]
         public void Interface_Shoud_Startwith_I()
@@ -298,30 +338,30 @@ namespace Architecture.Tests
             Assert.True(testResult.IsSuccessful);
         }
 
-        //[Fact]
-        //public void Repository_Shoud_Endtwith_Repository()
-        //{
-        //    //Arrange
+        [Fact]
+        public void Repository_Shoud_HaveSsuffix_Repository()
+        {
+            //Arrange
 
-        //    //  var assembly = Types.InCurrentDomain();
-        //    var assembly = typeof(Infrastructure.DependencyInjection).Assembly;
-
-
-        //    //Act
-        //    var testResult = Types.InAssembly(assembly)
-        //        .That().ResideInNamespace("Infrastructure.Persistence.Repositories")
-        //        .And().AreClasses()
-        //        .Should().HaveNameEndingWith("Repository")
-        //        .GetResult();
+            //  var assembly = Types.InCurrentDomain();
+            var assembly = typeof(Infrastructure.DependencyInjection).Assembly;
 
 
-        //    //Assert
-        //    Assert.True(testResult.IsSuccessful);
-        //}
+            //Act
+            var testResult = Types.InAssembly(assembly)
+                .That().ResideInNamespaceContaining("Infrastructure.Persistence.Repositories")
+                .And().AreClasses()
+                .Should().HaveNameEndingWith("Repository")
+                .GetResult();
+
+
+            //Assert
+            Assert.True(testResult.IsSuccessful);
+        }
 
 
 
-       
+
 
         // Classes that implement IRepository must reside in the Data namespace
         //result = Types.InCurrentDomain()

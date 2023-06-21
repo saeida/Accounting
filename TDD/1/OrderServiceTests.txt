@@ -1,0 +1,37 @@
+public class OrderServiceTests
+{
+
+
+[Fact]
+    public void CreateNewOrder_ShouldSaveOrderInDatabase()
+    {
+        // Arrange
+        var mockRepo = new Mock<IOrderRepository>();
+        var order = new Order { /* Initialize order properties */ };
+        mockRepo.Setup(repo => repo.SaveOrder(order)).Returns(Task.CompletedTask);
+        var orderService = new OrderService(mockRepo.Object);
+
+        // Act
+        var result = await orderService.CreateNewOrder(order);
+
+        // Assert
+        mockRepo.Verify(repo => repo.SaveOrder(order), Times.Once);
+        Assert.Equal(order, result);
+    }
+
+    [Fact]
+    public void GetOrderById_ShouldReturnCorrectOrder()
+    {
+        // Arrange
+        var mockRepo = new Mock<IOrderRepository>();
+        var order = new Order { /* Initialize order properties */ };
+        mockRepo.Setup(repo => repo.GetOrderById(order.Id)).ReturnsAsync(order);
+        var orderService = new OrderService(mockRepo.Object);
+
+        // Act
+        var result = await orderService.GetOrderById(order.Id);
+
+        // Assert
+        Assert.Equal(order, result);
+    }
+}
