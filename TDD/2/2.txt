@@ -1,0 +1,30 @@
+تست ورود با نام کاربری و کلمه عبور صحیح
+تست ورود با نام کاربری و کلمه عبور نامعتبر
+تست ورود با نام کاربری صحیح و کلمه عبور خالی
+تست ورود با نام کاربری خالی و کلمه عبور صحیح
+تست ورود با نام کاربری و کلمه عبور خالی
+تست ورود با نام کاربری و کلمه عبور اشتباه چند بار تلاش متوالی
+تست ورود با نام کاربری و کلمه عبور در حالت قفل شده
+تست ورود به سیستم با کاربر مدیر و دسترسی‌های مدیر
+تست ورود به سیستم با کاربر عادی و دسترسی‌های کاربر عادی
+
+
+بنابراین، شما نیازی به نوشتن تست برای بررسی ورود با نام کاربری و کلمه عبور خالی ندارید، زیرا این کار از قابلیت‌های FluentValidation پوشش داده شده است. ولی در صورتی که می‌خواهید از صحت عملکرد FluentValidation در این مورد مطمئن شوید، می‌توانید برای این موضوع یک یا چند تست نوشته و اجرا کنید. به عنوان مثال، برای بررسی اینکه آیا فیلد نام کاربری پر شده است یا خیر، می‌توانید از یک تست مانند زیر استفاده کنید:
+
+
+
+
+[Test]
+public void When_Username_Is_Empty_Should_Return_ValidationError()
+{
+    // Arrange
+    var validator = new LoginModelValidator();
+    var model = new LoginModel { Username = "", Password = "mypassword" };
+
+    // Act
+    var result = validator.Validate(model);
+
+    // Assert
+    result.IsValid.Should().BeFalse();
+    result.Errors.Should().Contain(e => e.PropertyName == "Username" && e.ErrorMessage == "'Username' must not be empty.");
+}
