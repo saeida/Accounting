@@ -9,6 +9,8 @@ using Infrastructure.Persistence.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using AutoMapper;
+using Domain.Interface.User;
+using Infrastructure.Persistence.Repositories.User;
 
 namespace Infrastructure
 {
@@ -30,6 +32,7 @@ namespace Infrastructure
 
             services.AddScoped<ICustomerQueryRepository, CustomerQueryRepository>();          
             services.AddScoped<ICustomerCommandRepository, CustomerCommandRepository>();
+            services.AddScoped<IUserQueryRepository, UserQueryRepository>();
             services.AddAutoMapper(assembly);
         
             return services;

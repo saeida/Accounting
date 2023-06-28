@@ -31,7 +31,7 @@ namespace Application.Customer.Commands.CreateCustomer
             cm.Email = command.Email;
 
 
-            var validator = new CreateCustomerCommandValidation();
+            var validator = new CreateCustomerCommandValidator();
             var validationResult = await validator.ValidateAsync(command);
 
             if (!validationResult.IsValid)

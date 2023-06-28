@@ -10,6 +10,6 @@ namespace Domain.Interface.User
 {
     public interface IUserQueryRepository
     {
-        public Task<UserModel> GetUserByUsernameAndPassword();
+        public Task<UserModel> GetUserByUsernameAndPassword(UserModel user);
     }
 }

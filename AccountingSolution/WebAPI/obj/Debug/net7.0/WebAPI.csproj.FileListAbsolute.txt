@@ -1,9 +1,3 @@
-F:\project\Mohsen\Accounting\AccountingSolution\WebAPI\obj\Debug\net7.0\WebAPI.csproj.AssemblyReference.cache
-F:\project\Mohsen\Accounting\AccountingSolution\WebAPI\obj\Debug\net7.0\WebAPI.GeneratedMSBuildEditorConfig.editorconfig
-F:\project\Mohsen\Accounting\AccountingSolution\WebAPI\obj\Debug\net7.0\WebAPI.AssemblyInfoInputs.cache
-F:\project\Mohsen\Accounting\AccountingSolution\WebAPI\obj\Debug\net7.0\WebAPI.AssemblyInfo.cs
-F:\project\Mohsen\Accounting\AccountingSolution\WebAPI\obj\Debug\net7.0\WebAPI.csproj.CoreCompileInputs.cache
-F:\project\Mohsen\Accounting\AccountingSolution\WebAPI\obj\Debug\net7.0\WebAPI.MvcApplicationPartsAssemblyInfo.cache
 F:\project\Mohsen\Accounting\AccountingSolution\WebAPI\bin\Debug\net7.0\web.config
 F:\project\Mohsen\Accounting\AccountingSolution\WebAPI\bin\Debug\net7.0\appsettings.Development.json
 F:\project\Mohsen\Accounting\AccountingSolution\WebAPI\bin\Debug\net7.0\appsettings.json
@@ -82,7 +76,13 @@ F:\project\Mohsen\Accounting\AccountingSolution\WebAPI\bin\Debug\net7.0\Infrastr
 F:\project\Mohsen\Accounting\AccountingSolution\WebAPI\bin\Debug\net7.0\Domain.pdb
 F:\project\Mohsen\Accounting\AccountingSolution\WebAPI\bin\Debug\net7.0\en-US\Application.resources.dll
 F:\project\Mohsen\Accounting\AccountingSolution\WebAPI\bin\Debug\net7.0\fa-IR\Application.resources.dll
+F:\project\Mohsen\Accounting\AccountingSolution\WebAPI\obj\Debug\net7.0\WebAPI.csproj.AssemblyReference.cache
+F:\project\Mohsen\Accounting\AccountingSolution\WebAPI\obj\Debug\net7.0\WebAPI.GeneratedMSBuildEditorConfig.editorconfig
+F:\project\Mohsen\Accounting\AccountingSolution\WebAPI\obj\Debug\net7.0\WebAPI.AssemblyInfoInputs.cache
+F:\project\Mohsen\Accounting\AccountingSolution\WebAPI\obj\Debug\net7.0\WebAPI.AssemblyInfo.cs
+F:\project\Mohsen\Accounting\AccountingSolution\WebAPI\obj\Debug\net7.0\WebAPI.csproj.CoreCompileInputs.cache
 F:\project\Mohsen\Accounting\AccountingSolution\WebAPI\obj\Debug\net7.0\WebAPI.MvcApplicationPartsAssemblyInfo.cs
+F:\project\Mohsen\Accounting\AccountingSolution\WebAPI\obj\Debug\net7.0\WebAPI.MvcApplicationPartsAssemblyInfo.cache
 F:\project\Mohsen\Accounting\AccountingSolution\WebAPI\obj\Debug\net7.0\staticwebassets\msbuild.WebAPI.Microsoft.AspNetCore.StaticWebAssets.props
 F:\project\Mohsen\Accounting\AccountingSolution\WebAPI\obj\Debug\net7.0\staticwebassets\msbuild.build.WebAPI.props
 F:\project\Mohsen\Accounting\AccountingSolution\WebAPI\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.WebAPI.props

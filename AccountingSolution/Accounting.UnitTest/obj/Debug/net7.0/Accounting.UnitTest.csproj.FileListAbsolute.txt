@@ -1,9 +1,4 @@
 F:\project\Mohsen\Accounting\AccountingSolution\Accounting.UnitTest\bin\Debug\net7.0\CoverletSourceRootsMapping
-F:\project\Mohsen\Accounting\AccountingSolution\Accounting.UnitTest\obj\Debug\net7.0\Accounting.UnitTest.csproj.AssemblyReference.cache
-F:\project\Mohsen\Accounting\AccountingSolution\Accounting.UnitTest\obj\Debug\net7.0\Accounting.UnitTest.GeneratedMSBuildEditorConfig.editorconfig
-F:\project\Mohsen\Accounting\AccountingSolution\Accounting.UnitTest\obj\Debug\net7.0\Accounting.UnitTest.AssemblyInfoInputs.cache
-F:\project\Mohsen\Accounting\AccountingSolution\Accounting.UnitTest\obj\Debug\net7.0\Accounting.UnitTest.AssemblyInfo.cs
-F:\project\Mohsen\Accounting\AccountingSolution\Accounting.UnitTest\obj\Debug\net7.0\Accounting.UnitTest.csproj.CoreCompileInputs.cache
 F:\project\Mohsen\Accounting\AccountingSolution\Accounting.UnitTest\bin\Debug\net7.0\testhost.dll
 F:\project\Mohsen\Accounting\AccountingSolution\Accounting.UnitTest\bin\Debug\net7.0\WebAPI.deps.json
 F:\project\Mohsen\Accounting\AccountingSolution\Accounting.UnitTest\bin\Debug\net7.0\WebAPI.runtimeconfig.json
@@ -171,6 +166,11 @@ F:\project\Mohsen\Accounting\AccountingSolution\Accounting.UnitTest\bin\Debug\ne
 F:\project\Mohsen\Accounting\AccountingSolution\Accounting.UnitTest\bin\Debug\net7.0\WebAPI.pdb
 F:\project\Mohsen\Accounting\AccountingSolution\Accounting.UnitTest\bin\Debug\net7.0\en-US\Application.resources.dll
 F:\project\Mohsen\Accounting\AccountingSolution\Accounting.UnitTest\bin\Debug\net7.0\fa-IR\Application.resources.dll
+F:\project\Mohsen\Accounting\AccountingSolution\Accounting.UnitTest\obj\Debug\net7.0\Accounting.UnitTest.csproj.AssemblyReference.cache
+F:\project\Mohsen\Accounting\AccountingSolution\Accounting.UnitTest\obj\Debug\net7.0\Accounting.UnitTest.GeneratedMSBuildEditorConfig.editorconfig
+F:\project\Mohsen\Accounting\AccountingSolution\Accounting.UnitTest\obj\Debug\net7.0\Accounting.UnitTest.AssemblyInfoInputs.cache
+F:\project\Mohsen\Accounting\AccountingSolution\Accounting.UnitTest\obj\Debug\net7.0\Accounting.UnitTest.AssemblyInfo.cs
+F:\project\Mohsen\Accounting\AccountingSolution\Accounting.UnitTest\obj\Debug\net7.0\Accounting.UnitTest.csproj.CoreCompileInputs.cache
 F:\project\Mohsen\Accounting\AccountingSolution\Accounting.UnitTest\obj\Debug\net7.0\Accounting.UnitTest.csproj.CopyComplete
 F:\project\Mohsen\Accounting\AccountingSolution\Accounting.UnitTest\obj\Debug\net7.0\Accounting.UnitTest.dll
 F:\project\Mohsen\Accounting\AccountingSolution\Accounting.UnitTest\obj\Debug\net7.0\refint\Accounting.UnitTest.dll
