@@ -11,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using AutoMapper;
 using Domain.Interface.User;
 using Infrastructure.Persistence.Repositories.User;
+using Microsoft.AspNetCore.Identity;
 
 namespace Infrastructure
 {
@@ -30,9 +31,12 @@ namespace Infrastructure
 
             });
 
+         
+
             services.AddScoped<ICustomerQueryRepository, CustomerQueryRepository>();          
             services.AddScoped<ICustomerCommandRepository, CustomerCommandRepository>();
             services.AddScoped<IUserQueryRepository, UserQueryRepository>();
+            services.AddScoped<IUserCommandRepository, UserCommandRepository>();
             services.AddAutoMapper(assembly);
         
             return services;

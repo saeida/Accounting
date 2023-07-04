@@ -28,7 +28,7 @@ namespace Infrastructure.Persistence.Repositories.User
         public async Task<UserModel> GetUserByUsernameAndPassword(UserModel user)
         {
 
-            var tempResult = await _context.Users.Where(x => x.UserName == user.UserName && x.Password == user.Password).SingleOrDefaultAsync();
+            var tempResult = await _context.Users.Where(x => x.Username == user.Username && x.Password == user.Password).SingleOrDefaultAsync();
 
             if(tempResult == null) { return null; }
 

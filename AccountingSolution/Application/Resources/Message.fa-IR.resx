@@ -123,6 +123,9 @@
   <data name="GoodbyeMessage" xml:space="preserve">
     <value>خدا حافظ!</value>
   </data>
+  <data name="InvalidUserorPassword" xml:space="preserve">
+    <value>Invalid email or password .</value>
+  </data>
   <data name="WelcomeMessage" xml:space="preserve">
     <value>خوش آمدید!</value>
   </data>

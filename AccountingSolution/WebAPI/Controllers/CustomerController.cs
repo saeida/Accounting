@@ -2,6 +2,7 @@
 using Application.Customer.Queries.GetAllCustomer;
 using Domain.Model.Customer;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
@@ -10,6 +11,8 @@ using Serilog;
 using Serilog.Events;
 using System;
 using System.Globalization;
+using System.Reflection;
+using System.Resources;
 using WebAPI.Model;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
@@ -31,8 +34,10 @@ namespace WebAPI.Controllers
         /// </summary>
         /// <param name="command">اطلاعات مشتری جدید</param>
         /// <returns></returns>
+      
         [HttpPost]
         [Route("CreateCustomer")]
+        [Authorize]
         public async Task<ActionResult<CustomerModel>> CreateCustomer([FromBody] CreateCustomerCommand command)
         {
             var result = await _mediator.Send(command);
@@ -44,19 +49,23 @@ namespace WebAPI.Controllers
         /// لیست مشتریان را برمیگرداند
         /// </summary>
         /// <returns></returns>
+    
         [HttpGet]
         [Route("GetAllCustomerQuery")]
+        [Authorize]
         public async Task<ActionResult<List<CustomerModel>>> GetAllCustomerQuery()
         {
             //Log.Information("Getting the Test running...");
             //var Count = 10;
             //Log.Error("Customer Number Is  {@Count} retrieved from DB", Count);
             //Log.ForContext("UserId", "101").Information("Log message");
-           // var culture = HttpContext.Request.Headers["Accept-Language"].ToString();
+            // var culture = HttpContext.Request.Headers["Accept-Language"].ToString();
 
             // Set the current culture of the thread
-           /// CultureInfo.CurrentCulture = CultureInfo.GetCultureInfo(culture);
-           // CultureInfo.CurrentUICulture = CultureInfo.GetCultureInfo(culture);
+            /// CultureInfo.CurrentCulture = CultureInfo.GetCultureInfo(culture);
+            // CultureInfo.CurrentUICulture = CultureInfo.GetCultureInfo(culture);
+
+         
 
             HttpContext.Items["data"] = await _mediator.Send(new GetAllCustomerQuery());
 

@@ -5,7 +5,10 @@ using FluentValidation;
 using MediatR;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
+using System.Reflection;
+using System.Resources;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -21,6 +24,14 @@ namespace Application.Customer.Commands.CreateCustomer
         }
         public async Task<Int64> Handle(CreateCustomerCommand command, CancellationToken cancellationToken)
         {
+
+            //var cultureInfo = CultureInfo.GetCultureInfo("en-US");  // یا "fa-IR" برای زبان فارسی
+          
+
+            //var resourceManager = new ResourceManager("Application.Resources.Message", Assembly.GetExecutingAssembly());
+            //var message = resourceManager.GetString("InvalidUserorPassword", CultureInfo.CurrentCulture);
+
+
             CustomerModel cm = new CustomerModel();
             cm.Firstname = command.Firstname;
             cm.Firstname = command.Firstname;

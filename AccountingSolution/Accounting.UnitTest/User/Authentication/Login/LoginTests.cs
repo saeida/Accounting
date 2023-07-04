@@ -33,13 +33,13 @@ namespace Accounting.UnitTest.User.Authentication.Login
             var mockRepo = new Mock<IUserQueryRepository>();
     
 
-            var user = new UserModel {Id=0, UserName = username, Password = password, IsActive = false };
+            var user = new UserModel {Id=0, Username = username, Password = password, IsActive = false };
 
            // mockRepo.Setup(repository => repository.GetUserByUsernameAndPassword(user))
            //.ReturnsAsync(user);
 
-            mockRepo.Setup(x => x.GetUserByUsernameAndPassword(It.Is<UserModel>(q => q.UserName == username && q.Password == password)))
-                 .ReturnsAsync(new UserModel { UserName = "testuser", Password = "testpassword" });
+            mockRepo.Setup(x => x.GetUserByUsernameAndPassword(It.Is<UserModel>(q => q.Username == username && q.Password == password)))
+                 .ReturnsAsync(new UserModel { Username = "testuser", Password = "testpassword" });
 
             var loginQuery = new LoginQuery { UserName = username, Password = password };
             var loginHandler = new LoginQueryHandler(mockRepo.Object);
@@ -51,7 +51,7 @@ namespace Accounting.UnitTest.User.Authentication.Login
 
             // Assert
             Assert.NotNull(loginResult);
-            Assert.Equal(username, loginResult.UserName);
+            Assert.Equal(username, loginResult.Username);
             Assert.Equal(password, loginResult.Password);
         }
 
@@ -65,12 +65,10 @@ namespace Accounting.UnitTest.User.Authentication.Login
             string password = "testpassword1";
             var mockRepo = new Mock<IUserQueryRepository>();
 
+            var user = new UserModel { Id = 0, Username = username, Password = password, IsActive = false };
+                     
 
-            var user = new UserModel { Id = 0, UserName = username, Password = password, IsActive = false };
-
-          
-
-            mockRepo.Setup(x => x.GetUserByUsernameAndPassword(It.Is<UserModel>(q => q.UserName == username && q.Password == password)))
+            mockRepo.Setup(x => x.GetUserByUsernameAndPassword(It.Is<UserModel>(q => q.Username == username && q.Password == password)))
                   .ReturnsAsync((UserModel)null);
 
             var loginQuery = new LoginQuery { UserName = username, Password = password };
@@ -99,12 +97,12 @@ namespace Accounting.UnitTest.User.Authentication.Login
         {
 
             // Arrange
-            string username = "1";
-            string password = "1";
+            string username = "";
+            string password = "";
 
             var mockRepo = new Mock<IUserQueryRepository>();
 
-            mockRepo.Setup(x => x.GetUserByUsernameAndPassword(It.Is<UserModel>(q => q.UserName == username && q.Password == password)))
+            mockRepo.Setup(x => x.GetUserByUsernameAndPassword(It.Is<UserModel>(q => q.Username == username && q.Password == password)))
                   .ReturnsAsync((UserModel)null);
             var loginQuery = new LoginQuery { UserName = username, Password = password };
             var loginHandler = new LoginQueryHandler(mockRepo.Object);
@@ -117,7 +115,7 @@ namespace Accounting.UnitTest.User.Authentication.Login
 
 
             // تست  اعتبارسنجی ورودی‌های متد ورود به سیستم مانند نام کاربری و رمزعبور
-            [Fact]
+        [Fact]
         public async Task LoginQueryHandler_InvalidCredentials_ReturnsTrueAsync()
         {
             // Arrange

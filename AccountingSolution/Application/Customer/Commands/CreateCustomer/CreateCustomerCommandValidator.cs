@@ -21,8 +21,8 @@ namespace Application.Customer.Commands.CreateCustomer
             RuleFor(x => x.PhoneNumber).NotEmpty();
             RuleFor(x => x.BankAccountNumber).MinimumLength(2);
             //  RuleFor(x => x.BankAccountNumber).InclusiveBetween(200, 600);
-            //  RuleFor(x => x.Firstname).NotEmpty().MustAsync(BeUniqueFisrtName).WithMessage("A book with the same title already exists.");
-            RuleFor(x => x.Firstname).MustAsync(BeUniqueFisrtName).WithMessage("A book with the same title already exists.");
+            //  RuleFor(x => x.Firstname).NotEmpty().MustAsync(BeUniqueFisrtName).WithMessage("A user with the same title already exists.");
+            RuleFor(x => x.Firstname).MustAsync(BeUniqueFisrtName).WithMessage("A user with the same title already exists.");
         }
 
         private async Task<bool> BeUniqueFisrtName(string title, CancellationToken cancellationToken)

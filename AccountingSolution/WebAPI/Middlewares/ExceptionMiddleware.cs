@@ -40,7 +40,7 @@ namespace WebAPI.Middlewares
                 await httpContext.Response.WriteAsync(JsonConvert.SerializeObject(new MessageResult<object>
                 {
                     Data = httpContext.Items["data"],
-                    Message = "عملیات با مفقیت انجام شد", //httpContext.Items["message"].ToString()
+                    Message = "عملیات با موفیت انجام شد", //httpContext.Items["message"].ToString()
                     StatusCode = (int)HttpStatusCode.OK
                 }));
             }

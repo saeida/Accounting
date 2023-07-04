@@ -23,7 +23,7 @@ namespace Application.User.Queries
         public async Task<UserModel> Handle(LoginQuery request, CancellationToken cancellationToken)
         {
             UserModel um = new UserModel();
-            um.UserName = request.UserName;
+            um.Username = request.UserName;
             um.Password = request.Password;
 
             var validator = new LoginQueryValidator();
