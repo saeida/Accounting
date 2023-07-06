@@ -21,15 +21,18 @@ namespace Application.Member.Login.Commands
         private readonly IUserCommandRepository _userCommandRepository;
         private readonly IJwtProvider _iJwtProvider;
 
-     public LoginCommandHandler(IUserCommandRepository userCommandRepository)
+     public LoginCommandHandler(IUserCommandRepository userCommandRepository, IJwtProvider iJwtProvider)
         {
             _userCommandRepository = userCommandRepository;
+            _iJwtProvider = iJwtProvider;
         }
 
 
         public async Task<LoginResultModel> Handle(LoginCommand request, CancellationToken cancellationToken)
         {
-
+            UserModel um = new UserModel();
+            um.Username = request.UserName;
+            um.Password = request.Password;
             string token;
             var validator = new LoginCommandValidator();
             var validationResult = await validator.ValidateAsync(request);
@@ -39,7 +42,7 @@ namespace Application.Member.Login.Commands
                 throw new ValidationException(validationResult.ToString());
             }
 
-            var user = await _userCommandRepository.GetUserByUsernameandPassword(request.UserName,request.Password);
+            var user = await _userCommandRepository.GetUserByUsernameandPassword(um);
 
             var cultureInfo = CultureInfo.GetCultureInfo("en-US");  // یا "fa-IR" برای زبان فارسی
             var resourceManager = new ResourceManager("Application.Resources.Message", Assembly.GetExecutingAssembly());

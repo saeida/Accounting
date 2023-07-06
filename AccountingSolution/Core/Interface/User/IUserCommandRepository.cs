@@ -9,6 +9,6 @@ namespace Domain.Interface.User
 {
     public interface IUserCommandRepository
     {
-        public Task<UserModel> GetUserByUsernameandPassword(string Username, string Password);
+        public Task<UserModel> GetUserByUsernameandPassword(UserModel user);
     }
 }

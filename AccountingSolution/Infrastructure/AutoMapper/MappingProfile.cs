@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Domain.Model.Customer;
+using Domain.Model.User;
 using Infrastructure.Persistence.Entities;
 using System;
 using System.Collections.Generic;
@@ -15,7 +16,9 @@ namespace Infrastructure.AutoMapper
         {
             CreateMap<Customer, CustomerModel>();
             CreateMap<CustomerModel, Customer>();
-         
+            CreateMap<UserModel, User>();
+            CreateMap<User, UserModel>();
+
         }
     }
 }

@@ -12,6 +12,7 @@ using AutoMapper;
 using Domain.Interface.User;
 using Infrastructure.Persistence.Repositories.User;
 using Microsoft.AspNetCore.Identity;
+using Infrastructure.Authentication.JWT;
 
 namespace Infrastructure
 {
@@ -37,6 +38,8 @@ namespace Infrastructure
             services.AddScoped<ICustomerCommandRepository, CustomerCommandRepository>();
             services.AddScoped<IUserQueryRepository, UserQueryRepository>();
             services.AddScoped<IUserCommandRepository, UserCommandRepository>();
+            services.AddScoped<IJwtProvider, JwtProvider>();
+            
             services.AddAutoMapper(assembly);
         
             return services;
