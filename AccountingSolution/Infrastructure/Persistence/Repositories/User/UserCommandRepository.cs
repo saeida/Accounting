@@ -3,6 +3,7 @@ using Azure.Core;
 using Domain.Interface.User;
 using Domain.Model.User;
 using Infrastructure.Persistence.Entities;
+using Infrastructure.Persistence.Entities.CrudTest;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -17,9 +18,9 @@ namespace Infrastructure.Persistence.Repositories
 {
     public class UserCommandRepository: IUserCommandRepository
     {
-        protected readonly CRUDTESTContext _context;
+        protected readonly CrudtestContext _context;
         private readonly IMapper _mapper;
-        public UserCommandRepository(CRUDTESTContext context,  IMapper mapper)
+        public UserCommandRepository(CrudtestContext context,  IMapper mapper)
         {
             _context = context;
             _mapper = mapper;

@@ -1,6 +1,7 @@
 ﻿
 using Domain.Interface;
 using Infrastructure.Persistence.Entities;
+using Infrastructure.Persistence.Entities.CrudTest;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -14,8 +15,8 @@ namespace Infrastructure.Persistence.Repositories
     public class QueryRepository<T> : IQueryRepository<T> where T : class
     {
 
-        public readonly CRUDTESTContext _dbContext;
-        public QueryRepository(CRUDTESTContext dbContext)
+        public readonly CrudtestContext _dbContext;
+        public QueryRepository(CrudtestContext dbContext)
         {
             _dbContext = dbContext;
         }

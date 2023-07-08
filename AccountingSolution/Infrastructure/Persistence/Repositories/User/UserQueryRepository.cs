@@ -3,6 +3,7 @@ using Domain.Interface.User;
 using Domain.Model.Customer;
 using Domain.Model.User;
 using Infrastructure.Persistence.Entities;
+using Infrastructure.Persistence.Entities.CrudTest;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -16,10 +17,10 @@ namespace Infrastructure.Persistence.Repositories.User
 {
     internal class UserQueryRepository : IUserQueryRepository
     {
-        protected readonly CRUDTESTContext _context;
+        protected readonly CrudtestContext _context;
         private readonly IMapper _mapper;
 
-        public UserQueryRepository(CRUDTESTContext context, IMapper mapper)
+        public UserQueryRepository(CrudtestContext context, IMapper mapper)
         {
             _context = context;
             _mapper = mapper;

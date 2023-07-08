@@ -2,6 +2,7 @@
 using Domain.Model.Customer;
 using Domain.Model.User;
 using Infrastructure.Persistence.Entities;
+using Infrastructure.Persistence.Entities.CrudTest;
 using System;
 using System.Collections.Generic;
 using System.Linq;

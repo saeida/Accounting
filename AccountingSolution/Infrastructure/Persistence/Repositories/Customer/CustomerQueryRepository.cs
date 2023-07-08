@@ -3,6 +3,7 @@ using AutoMapper;
 using Domain.Interface.Customer;
 using Domain.Model.Customer;
 using Infrastructure.Persistence.Entities;
+using Infrastructure.Persistence.Entities.CrudTest;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,10 +15,10 @@ namespace Infrastructure.Persistence.Repositories.Customer
     public class CustomerQueryRepository :  ICustomerQueryRepository
     {
 
-        protected readonly CRUDTESTContext _context;
+        protected readonly CrudtestContext _context;
         private readonly IMapper _mapper;
 
-        public CustomerQueryRepository(CRUDTESTContext context, IMapper mapper)
+        public CustomerQueryRepository(CrudtestContext context, IMapper mapper)
         {
             _context = context;
             _mapper = mapper;

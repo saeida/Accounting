@@ -1,5 +1,6 @@
 ﻿using Domain.Interface;
 using Infrastructure.Persistence.Entities;
+using Infrastructure.Persistence.Entities.CrudTest;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -11,9 +12,9 @@ namespace Infrastructure.Persistence.Repositories
 {
     public class CommandRepository<T> : ICommandRepository<T> where T : class
     {
-        protected readonly CRUDTESTContext _context;
+        protected readonly CrudtestContext _context;
 
-        public CommandRepository(CRUDTESTContext context)
+        public CommandRepository(CrudtestContext context)
         {
             _context = context;
         }

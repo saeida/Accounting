@@ -13,6 +13,7 @@ using Domain.Interface.User;
 using Infrastructure.Persistence.Repositories.User;
 using Microsoft.AspNetCore.Identity;
 using Infrastructure.Authentication.JWT;
+using Infrastructure.Persistence.Entities.CrudTest;
 
 namespace Infrastructure
 {
@@ -24,7 +25,7 @@ namespace Infrastructure
 
             var assembly = typeof(DependencyInjection).Assembly;
 
-            services.AddDbContext<CRUDTESTContext>(options =>
+            services.AddDbContext<CrudtestContext>(options =>
             {
                 object p = options.UseSqlServer("Data Source=DESKTOP-LJH87UL;Initial Catalog=CRUDTEST;Integrated Security=True;Trusted_Connection=false; Encrypt=False;User ID=sa;Password=123456");
                 ////  options.UseSqlServer(nooshDarooConnectionString);

@@ -90,8 +90,8 @@ namespace WebAPI
                 ValidateIssuerSigningKey = true, // this will validate the 3rd part of the jwt token using the secret that we added in the appsettings and verify we have generated the jwt token
                                                  // سبب خواهد شد تا میان‌افزار اعتبارسنجی، بررسی کند که آیا توکن دریافتی از سمت کاربر توسط برنامه‌ی ما امضاء شده‌است یا خیر؟
                 IssuerSigningKey = new SymmetricSecurityKey(key), // Add the secret key to our Jwt encryption
-                ValidateIssuer = false,//سروری که آن توکن را ایجاد کرده است را معتبر می سازید؟
-                ValidateAudience = false,//طمینان حاصل می کنید که گیرنده توکن مجاز به دریافت آن است
+                ValidateIssuer = true,//سروری که آن توکن را ایجاد کرده است را معتبر می سازید؟
+                ValidateAudience = true,//طمینان حاصل می کنید که گیرنده توکن مجاز به دریافت آن است
                 RequireExpirationTime = false,
                 ValidateLifetime = true,//به معنای بررسی خودکار طول عمر توکن دریافتی از سمت کاربر است. اگر توکن منقضی شده باشد، اعتبارسنجی به صورت خودکار خاتمه خواهد یافت.
                                         //  بررسی می کنید که توکن منقضی نشده باشد و کلید امضای صادرکننده معتبر باشد. 
