@@ -1,12 +1,14 @@
 ﻿using Application.Customer.Commands.CreateCustomer;
 using Application.Customer.Queries.GetAllCustomer;
 using Domain.Model.Customer;
+using Infrastructure.Authentication.Permission;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization;
+using Microsoft.IdentityModel.JsonWebTokens;
 using Serilog;
 using Serilog.Events;
 using System;
@@ -34,7 +36,8 @@ namespace WebAPI.Controllers
         /// </summary>
         /// <param name="command">اطلاعات مشتری جدید</param>
         /// <returns></returns>
-      
+
+        [HasPermission(Permission.Create)]
         [HttpPost]
         [Route("CreateCustomer")]
         [Authorize]
@@ -65,7 +68,8 @@ namespace WebAPI.Controllers
             /// CultureInfo.CurrentCulture = CultureInfo.GetCultureInfo(culture);
             // CultureInfo.CurrentUICulture = CultureInfo.GetCultureInfo(culture);
 
-         
+            var test = HttpContext.User.Claims.FirstOrDefault(x => x.Type == JwtRegisteredClaimNames.Sub)?.Value;
+
 
             HttpContext.Items["data"] = await _mediator.Send(new GetAllCustomerQuery());
 

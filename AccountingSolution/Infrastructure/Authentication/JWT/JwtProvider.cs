@@ -42,8 +42,8 @@ namespace Infrastructure.Authentication.JWT
                 Subject = new ClaimsIdentity(claims),
                 Expires = DateTime.Now.AddDays(3),
                 SigningCredentials = creds,
-                Audience=_options.Audience,
-                Issuer=_options.Issuer
+                Audience = _options.Audience,
+                Issuer = _options.Issuer
             };
 
             var tokenHandler = new JwtSecurityTokenHandler();

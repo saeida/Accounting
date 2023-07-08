@@ -84,7 +84,21 @@ namespace WebAPI
             //builder.Services.ConfigureOptions<JwtBearerOptionSetup>();
 
             builder.Services.Configure<JwtOptions>(builder.Configuration.GetSection("jwt"));
-            var key = Encoding.ASCII.GetBytes(builder.Configuration["JwtConfig:Secret"]);
+            var key = Encoding.ASCII.GetBytes(builder.Configuration["jwt:SecretKey"]);
+            // define variables
+            byte[] audienceBytes = Encoding.ASCII.GetBytes(builder.Configuration["jwt:Audience"]);
+
+            // convert bytes to string
+            string audienceString = Encoding.ASCII.GetString(audienceBytes);
+
+            // define variables
+            byte[] issuerBytes = Encoding.ASCII.GetBytes(builder.Configuration["jwt:Issuer"]);
+
+            // convert bytes to string
+            string issuerString = Encoding.ASCII.GetString(issuerBytes);
+
+         
+
             var tokenValidationParameters = new TokenValidationParameters
             {
                 ValidateIssuerSigningKey = true, // this will validate the 3rd part of the jwt token using the secret that we added in the appsettings and verify we have generated the jwt token
@@ -95,7 +109,8 @@ namespace WebAPI
                 RequireExpirationTime = false,
                 ValidateLifetime = true,//به معنای بررسی خودکار طول عمر توکن دریافتی از سمت کاربر است. اگر توکن منقضی شده باشد، اعتبارسنجی به صورت خودکار خاتمه خواهد یافت.
                                         //  بررسی می کنید که توکن منقضی نشده باشد و کلید امضای صادرکننده معتبر باشد. 
-
+                ValidIssuer= issuerString,
+                ValidAudience= audienceString,
                 // Allow to use seconds for expiration of token
                 // Required only when token lifetime less than 5 minutes
                 //ه معنای تنظیم یک تلرانس و حد تحمل مدت زمان منقضی شدن توکن در حالت ValidateLifetime است. در اینجا به صفر تنظیم شده‌است.

@@ -16,6 +16,9 @@ F:\project\Mohsen\Accounting\AccountingSolution\WebAPI\bin\Debug\net7.0\MediatR.
 F:\project\Mohsen\Accounting\AccountingSolution\WebAPI\bin\Debug\net7.0\MediatR.Contracts.dll
 F:\project\Mohsen\Accounting\AccountingSolution\WebAPI\bin\Debug\net7.0\Microsoft.AspNet.Identity.Core.dll
 F:\project\Mohsen\Accounting\AccountingSolution\WebAPI\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+F:\project\Mohsen\Accounting\AccountingSolution\WebAPI\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+F:\project\Mohsen\Accounting\AccountingSolution\WebAPI\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+F:\project\Mohsen\Accounting\AccountingSolution\WebAPI\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 F:\project\Mohsen\Accounting\AccountingSolution\WebAPI\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
 F:\project\Mohsen\Accounting\AccountingSolution\WebAPI\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
 F:\project\Mohsen\Accounting\AccountingSolution\WebAPI\bin\Debug\net7.0\Microsoft.Data.SqlClient.dll
@@ -24,6 +27,9 @@ F:\project\Mohsen\Accounting\AccountingSolution\WebAPI\bin\Debug\net7.0\Microsof
 F:\project\Mohsen\Accounting\AccountingSolution\WebAPI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
 F:\project\Mohsen\Accounting\AccountingSolution\WebAPI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.SqlServer.dll
 F:\project\Mohsen\Accounting\AccountingSolution\WebAPI\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+F:\project\Mohsen\Accounting\AccountingSolution\WebAPI\bin\Debug\net7.0\Microsoft.Extensions.Identity.Core.dll
+F:\project\Mohsen\Accounting\AccountingSolution\WebAPI\bin\Debug\net7.0\Microsoft.Extensions.Identity.Stores.dll
+F:\project\Mohsen\Accounting\AccountingSolution\WebAPI\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
 F:\project\Mohsen\Accounting\AccountingSolution\WebAPI\bin\Debug\net7.0\Microsoft.Identity.Client.dll
 F:\project\Mohsen\Accounting\AccountingSolution\WebAPI\bin\Debug\net7.0\Microsoft.Identity.Client.Extensions.Msal.dll
 F:\project\Mohsen\Accounting\AccountingSolution\WebAPI\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
@@ -99,9 +105,3 @@ F:\project\Mohsen\Accounting\AccountingSolution\WebAPI\obj\Debug\net7.0\refint\W
 F:\project\Mohsen\Accounting\AccountingSolution\WebAPI\obj\Debug\net7.0\WebAPI.pdb
 F:\project\Mohsen\Accounting\AccountingSolution\WebAPI\obj\Debug\net7.0\WebAPI.genruntimeconfig.cache
 F:\project\Mohsen\Accounting\AccountingSolution\WebAPI\obj\Debug\net7.0\ref\WebAPI.dll
-F:\project\Mohsen\Accounting\AccountingSolution\WebAPI\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.Internal.dll
-F:\project\Mohsen\Accounting\AccountingSolution\WebAPI\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
-F:\project\Mohsen\Accounting\AccountingSolution\WebAPI\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
-F:\project\Mohsen\Accounting\AccountingSolution\WebAPI\bin\Debug\net7.0\Microsoft.Extensions.Identity.Core.dll
-F:\project\Mohsen\Accounting\AccountingSolution\WebAPI\bin\Debug\net7.0\Microsoft.Extensions.Identity.Stores.dll
-F:\project\Mohsen\Accounting\AccountingSolution\WebAPI\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
