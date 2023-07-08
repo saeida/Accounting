@@ -16,6 +16,9 @@ namespace Domain.Model.User
             public string Email { get; set; }
             public DateTime LastLoginDate { get; set; }
             public DateTime CreationDate { get; set; }
-     
+        public long? RoleId { get; set; }
+
+        public virtual RoleModel? RoleModel { get; set; }
+
     }
 }
