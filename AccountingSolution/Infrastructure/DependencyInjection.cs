@@ -14,6 +14,8 @@ using Infrastructure.Persistence.Repositories.User;
 using Microsoft.AspNetCore.Identity;
 using Infrastructure.Authentication.JWT;
 using Infrastructure.Persistence.Entities.CrudTest;
+using Microsoft.AspNetCore.Authorization;
+using Infrastructure.Authentication.Permission;
 
 namespace Infrastructure
 {
@@ -40,7 +42,10 @@ namespace Infrastructure
             services.AddScoped<IUserQueryRepository, UserQueryRepository>();
             services.AddScoped<IUserCommandRepository, UserCommandRepository>();
             services.AddScoped<IJwtProvider, JwtProvider>();
-            
+            services.AddSingleton<IAuthorizationHandler, PermissionAuthorizationHandler>();
+            services.AddSingleton<IAuthorizationPolicyProvider, PermissionAuthorizationPolicyProvider>();
+
+
             services.AddAutoMapper(assembly);
         
             return services;

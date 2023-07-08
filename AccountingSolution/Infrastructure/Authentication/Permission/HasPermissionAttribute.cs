@@ -9,7 +9,7 @@ namespace Infrastructure.Authentication.Permission
 {
     public sealed class HasPermissionAttribute:AuthorizeAttribute
     {
-        public HasPermissionAttribute(Permission permission):base(permission.ToString())
+        public HasPermissionAttribute(Permission permission):base(policy: permission.ToString())
         {
 
         }
