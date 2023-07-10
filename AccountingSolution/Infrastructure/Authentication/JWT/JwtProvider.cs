@@ -1,5 +1,6 @@
 ﻿using Domain.Interface;
 using Domain.Model.User;
+using Infrastructure.Authentication.Permission;
 using Infrastructure.Persistence.Entities;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
@@ -18,15 +19,16 @@ namespace Infrastructure.Authentication.JWT
     internal sealed class JwtProvider : IJwtProvider
     {
         private readonly JwtOptions _options;
-        public JwtProvider(IOptions<JwtOptions> options)
+        private readonly IPermissionService _permissionService;
+        public JwtProvider(IOptions<JwtOptions> options, IPermissionService permissionService )
         {
             _options = options.Value;
-
+            _permissionService = permissionService;
         }
-        public string Generate(UserModel user)
+        public async Task<string> GenerateAsync(UserModel user)
         {
           //  var claims = new Claim [] { };
-            var claims = new[]
+            var claims = new List<Claim>
              {
                 new Claim(ClaimTypes.Name, user.Username),
                 new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),            
@@ -34,6 +36,13 @@ namespace Infrastructure.Authentication.JWT
                  new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
 
             };
+
+            var permissions = await _permissionService.GetPermissionsAsync(user.Id);
+
+            foreach (var permission in permissions)
+            {
+                claims.Add(new Claim(CustomClaims.Permissions, permission));
+            }
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_options.SecretKey));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256Signature);

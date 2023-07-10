@@ -11,10 +11,17 @@ namespace Infrastructure.Authentication.Permission
 {
     public class PermissionAuthorizationHandler : AuthorizationHandler<PermissionRequirement>
     {
-        protected override async Task HandleRequirementAsync(AuthorizationHandlerContext context, PermissionRequirement requirement)
+        protected override  Task HandleRequirementAsync(AuthorizationHandlerContext context, PermissionRequirement requirement)
         {
-            //   string? userId = context.User.Claims.FirstOrDefault(x => x.Type == JwtRegisteredClaimNames.Sub)?.Value;
-            string? userId = context.User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.NameIdentifier)?.Value;
+
+            //  string? userId = context.User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.NameIdentifier)?.Value;
+            var permissions = context.User.Claims.Where(x => x.Type == CustomClaims.Permissions).Select(x => x.Value).ToHashSet();
+            if (permissions.Contains(requirement.Permission))
+            {
+                context.Succeed(requirement);
+            }
+
+            return Task.CompletedTask;
 
         }
     }

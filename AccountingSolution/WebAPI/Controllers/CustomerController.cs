@@ -37,7 +37,7 @@ namespace WebAPI.Controllers
         /// <param name="command">اطلاعات مشتری جدید</param>
         /// <returns></returns>
 
-        [HasPermission(Permission.Create)]
+        [HasPermission(CustomerPermission.Create)]
         [HttpPost]
         [Route("CreateCustomer")]
         [Authorize]
@@ -52,7 +52,7 @@ namespace WebAPI.Controllers
         /// لیست مشتریان را برمیگرداند
         /// </summary>
         /// <returns></returns>
-    
+        [HasPermission(OrderPermission.Create)]
         [HttpGet]
         [Route("GetAllCustomerQuery")]
         [Authorize]

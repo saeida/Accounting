@@ -9,6 +9,6 @@ namespace Domain.Interface
 {
     public interface IJwtProvider
     {
-        string Generate(UserModel User);
+       Task< string> GenerateAsync(UserModel User);
     }
 }

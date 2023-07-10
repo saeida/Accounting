@@ -11,6 +11,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Globalization;
 using System.Reflection;
 using System.Resources;
+using System.Runtime.InteropServices;
 
 namespace Application.Member.Login.Commands
 {
@@ -56,7 +57,7 @@ namespace Application.Member.Login.Commands
             else
             {
 
-                 token = _iJwtProvider.Generate(user);
+                 token = await _iJwtProvider.GenerateAsync(user);
             }
 
 

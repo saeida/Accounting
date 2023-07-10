@@ -16,6 +16,7 @@ using Infrastructure.Authentication.JWT;
 using Infrastructure.Persistence.Entities.CrudTest;
 using Microsoft.AspNetCore.Authorization;
 using Infrastructure.Authentication.Permission;
+using System.Collections;
 
 namespace Infrastructure
 {
@@ -26,6 +27,8 @@ namespace Infrastructure
         {
 
             var assembly = typeof(DependencyInjection).Assembly;
+
+        
 
             services.AddDbContext<CrudtestContext>(options =>
             {
@@ -41,6 +44,7 @@ namespace Infrastructure
             services.AddScoped<ICustomerCommandRepository, CustomerCommandRepository>();
             services.AddScoped<IUserQueryRepository, UserQueryRepository>();
             services.AddScoped<IUserCommandRepository, UserCommandRepository>();
+            services.AddScoped<IPermissionService, PermissionService>();
             services.AddScoped<IJwtProvider, JwtProvider>();
             services.AddSingleton<IAuthorizationHandler, PermissionAuthorizationHandler>();
             services.AddSingleton<IAuthorizationPolicyProvider, PermissionAuthorizationPolicyProvider>();

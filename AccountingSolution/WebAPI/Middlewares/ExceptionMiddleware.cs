@@ -40,8 +40,18 @@ namespace WebAPI.Middlewares
                 await httpContext.Response.WriteAsync(JsonConvert.SerializeObject(new MessageResult<object>
                 {
                     Data = httpContext.Items["data"],
-                    Message = "عملیات با موفیت انجام شد", //httpContext.Items["message"].ToString()
+                    Message = "عملیات با موفیت انجام شد",//todo:read from resources
                     StatusCode = (int)HttpStatusCode.OK
+                }));
+            }
+            else if(httpContext.Response.StatusCode == (int)HttpStatusCode.Forbidden)
+            {
+                httpContext.Response.ContentType = "application/json";
+                await httpContext.Response.WriteAsync(JsonConvert.SerializeObject(new MessageResult<object>
+                {
+                    Data =null,
+                    Message = "شما اجازه دسترسی به این بخش را ندارید",//todo:read from resources //httpContext.Items["message"].ToString()
+                    StatusCode = (int)HttpStatusCode.Forbidden
                 }));
             }
         }

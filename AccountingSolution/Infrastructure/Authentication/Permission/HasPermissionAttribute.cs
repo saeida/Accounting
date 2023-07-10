@@ -9,9 +9,14 @@ namespace Infrastructure.Authentication.Permission
 {
     public sealed class HasPermissionAttribute:AuthorizeAttribute
     {
-        public HasPermissionAttribute(Permission permission):base(policy: permission.ToString())
+        public HasPermissionAttribute(object permission)
         {
+            if (!(permission is Enum))
+            {
+                throw new ArgumentException("Argument must be an enum");
+            }
 
+            Policy = Convert.ToInt32(permission).ToString();
         }
     }
 }
