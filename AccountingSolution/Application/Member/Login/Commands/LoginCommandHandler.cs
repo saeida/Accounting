@@ -61,6 +61,7 @@ namespace Application.Member.Login.Commands
             }
 
 
+
             var result = new LoginResultModel (  token,  "" );
 
             return result;
