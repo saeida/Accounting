@@ -5,10 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Domain.Interface
+namespace Domain.Interface.User
 {
-    public interface IJwtProvider
+    public interface ITokenCommandRepository
     {
-       Task< string> GenerateAsync(UserModel User);
+        Task<Int64> Add(RefreshTokenModel refreshToken);
+       
     }
 }

@@ -20,6 +20,7 @@
   <ItemGroup>
     <Folder Include="Customer\Queries\GetCustomerById\" />
     <Folder Include="Customer\Queries\GetCustomer\" />
+    <Folder Include="Member\Login\Queries\" />
   </ItemGroup>
 
 </Project>

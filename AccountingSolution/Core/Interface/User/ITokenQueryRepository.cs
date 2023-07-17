@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace Domain.Interface.User
 {
-    public interface IRefreshTokenQueryRepositoy
+    public interface ITokenQueryRepository
     {
         Task<RefreshTokenModel> FindRefreshToken(string refreshToken);
-        Task<RefreshTokenModel> Update(RefreshTokenModel refreshToken);
+        Task<long> Update(RefreshTokenModel refreshToken);
         public Task<Int64> Logout(string JwtId);
     }
 }

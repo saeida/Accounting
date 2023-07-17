@@ -19,6 +19,8 @@ namespace Infrastructure.AutoMapper
             CreateMap<CustomerModel, Customer>();
             CreateMap<UserModel, User>();
             CreateMap<User, UserModel>();
+            CreateMap<RefreshToken, RefreshTokenModel>();
+            CreateMap<RefreshTokenModel, RefreshToken>();
 
         }
     }

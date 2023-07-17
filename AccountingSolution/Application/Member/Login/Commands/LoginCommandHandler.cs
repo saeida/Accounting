@@ -1,7 +1,7 @@
 ﻿
 using Application.Resources;
 using Application.User.Queries;
-using Domain.Interface;
+using Domain.Interface.Jwt;
 using Domain.Interface.User;
 using Domain.Model.User;
 using MediatR;
@@ -47,6 +47,7 @@ namespace Application.Member.Login.Commands
 
             var cultureInfo = CultureInfo.GetCultureInfo("en-US");  // یا "fa-IR" برای زبان فارسی
             var resourceManager = new ResourceManager("Application.Resources.Message", Assembly.GetExecutingAssembly());
+
             var message = resourceManager.GetString(MessageKeys.InvalidUserorPassword, CultureInfo.CurrentCulture);
 
         
@@ -61,8 +62,8 @@ namespace Application.Member.Login.Commands
             }
 
 
-
-            var result = new LoginResultModel (  token,  "" );
+            var refreshToken = await _iJwtProvider.GenerateRefreshToken(token);
+            var result = new LoginResultModel (  token, refreshToken);
 
             return result;
            

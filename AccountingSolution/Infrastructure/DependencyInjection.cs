@@ -1,7 +1,6 @@
 ﻿
 
 using Domain.Interface.Customer;
-using Domain.Interface;
 using Infrastructure.Persistence.Repositories.Customer;
 using Infrastructure.Persistence.Repositories;
 using Microsoft.Extensions.DependencyInjection;
@@ -17,6 +16,7 @@ using Infrastructure.Persistence.Entities.CrudTest;
 using Microsoft.AspNetCore.Authorization;
 using Infrastructure.Authentication.Permission;
 using System.Collections;
+using Domain.Interface.Jwt;
 
 namespace Infrastructure
 {
@@ -44,7 +44,11 @@ namespace Infrastructure
             services.AddScoped<ICustomerCommandRepository, CustomerCommandRepository>();
             services.AddScoped<IUserQueryRepository, UserQueryRepository>();
             services.AddScoped<IUserCommandRepository, UserCommandRepository>();
+            services.AddScoped<ITokenCommandRepository, TokenCommandRepository>();
+            services.AddScoped<ITokenQueryRepository, TokenQueryRepository>();
             services.AddScoped<IPermissionService, PermissionService>();
+    
+
             services.AddScoped<IJwtProvider, JwtProvider>();
             services.AddSingleton<IAuthorizationHandler, PermissionAuthorizationHandler>();
             services.AddSingleton<IAuthorizationPolicyProvider, PermissionAuthorizationPolicyProvider>();

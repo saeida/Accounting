@@ -5,6 +5,7 @@ using Domain.Model.User;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace WebAPI.Controllers.Memeber.Login
 {
@@ -24,6 +25,19 @@ namespace WebAPI.Controllers.Memeber.Login
         {
             var result = await _mediator.Send(command);
             return Ok(result);
+        }
+
+
+        [HttpPost]
+        [Route("TokenRefresh")]
+        public async Task<IActionResult> TokenRefresh([FromBody] TokenCommand command)
+        {
+
+            var result = await _mediator.Send(command);
+            return Ok(result);
+
+
+
         }
 
     }
