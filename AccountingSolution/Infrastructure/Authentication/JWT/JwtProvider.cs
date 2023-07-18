@@ -3,7 +3,7 @@ using Domain.Interface.User;
 using Domain.Model.User;
 using Infrastructure.Authentication.Permission;
 using Infrastructure.Persistence.Entities;
-using Infrastructure.Persistence.Entities.CrudTest;
+
 using Infrastructure.Persistence.Repositories.User;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;

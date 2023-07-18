@@ -1,7 +1,7 @@
 ﻿
 
-using Domain.Interface.Customer;
-using Infrastructure.Persistence.Repositories.Customer;
+
+
 using Infrastructure.Persistence.Repositories;
 using Microsoft.Extensions.DependencyInjection;
 using Infrastructure.Persistence.Entities;
@@ -12,11 +12,12 @@ using Domain.Interface.User;
 using Infrastructure.Persistence.Repositories.User;
 using Microsoft.AspNetCore.Identity;
 using Infrastructure.Authentication.JWT;
-using Infrastructure.Persistence.Entities.CrudTest;
+
 using Microsoft.AspNetCore.Authorization;
 using Infrastructure.Authentication.Permission;
 using System.Collections;
 using Domain.Interface.Jwt;
+using Infrastructure.Persistence.Entities.Accounting;
 
 namespace Infrastructure
 {
@@ -30,7 +31,7 @@ namespace Infrastructure
 
         
 
-            services.AddDbContext<CrudtestContext>(options =>
+            services.AddDbContext<SaminaDbContext>(options =>
             {
                 object p = options.UseSqlServer("Data Source=DESKTOP-LJH87UL;Initial Catalog=CRUDTEST;Integrated Security=True;Trusted_Connection=false; Encrypt=False;User ID=sa;Password=123456");
                 ////  options.UseSqlServer(nooshDarooConnectionString);
@@ -39,9 +40,6 @@ namespace Infrastructure
             });
 
          
-
-            services.AddScoped<ICustomerQueryRepository, CustomerQueryRepository>();          
-            services.AddScoped<ICustomerCommandRepository, CustomerCommandRepository>();
             services.AddScoped<IUserQueryRepository, UserQueryRepository>();
             services.AddScoped<IUserCommandRepository, UserCommandRepository>();
             services.AddScoped<ITokenCommandRepository, TokenCommandRepository>();

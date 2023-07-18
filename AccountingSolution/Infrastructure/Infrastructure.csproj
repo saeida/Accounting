@@ -29,6 +29,7 @@
   <ItemGroup>
     <Folder Include="MiddleWares\" />
     <Folder Include="Migrations\" />
+    <Folder Include="Persistence\Entities\Accounting\" />
   </ItemGroup>
 
 </Project>

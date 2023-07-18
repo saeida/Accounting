@@ -26,7 +26,7 @@ namespace Architecture.Tests
 
             //Arrange : setting up initial state - hese conditions
 
-            var assembly = typeof(Domain.Model.Customer.CustomerModel).Assembly;
+            var assembly = typeof(Domain.Model.User.LoginModel).Assembly;
 
 
             //Act : invoking the behavior we’re testing - this action is performed

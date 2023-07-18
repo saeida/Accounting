@@ -10,17 +10,18 @@ using System.Text;
 using System.Threading.Tasks;
 using Domain.Interface.User;
 using Domain.Model.User;
-using Infrastructure.Persistence.Entities.CrudTest;
+
 using Domain.Model.Customer;
+using Infrastructure.Persistence.Entities.Accounting;
 
 namespace Infrastructure.Persistence.Repositories.User
 {
     public class TokenCommandRepository : ITokenCommandRepository
     {
-        protected readonly CrudtestContext _context;
+        protected readonly SaminaDbContext _context;
         private readonly IMapper _mapper;
 
-        public TokenCommandRepository(CrudtestContext context, IMapper mapper)
+        public TokenCommandRepository(SaminaDbContext context, IMapper mapper)
         {
             _context = context;
             _mapper = mapper;

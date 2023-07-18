@@ -1,6 +1,6 @@
 ﻿
 using Application.Resources;
-using Application.User.Queries;
+
 using Domain.Interface.Jwt;
 using Domain.Interface.User;
 using Domain.Model.User;

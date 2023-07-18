@@ -1,7 +1,8 @@
 ﻿using AutoMapper;
 using Domain.Interface.User;
 using Domain.Model.User;
-using Infrastructure.Persistence.Entities.CrudTest;
+using Infrastructure.Persistence.Entities.Accounting;
+
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -15,9 +16,9 @@ namespace Infrastructure.Authentication.Permission
     public class PermissionService : IPermissionService
     {
 
-        protected readonly CrudtestContext _context;
+        protected readonly SaminaDbContext _context;
         private readonly IMapper _mapper;
-        public PermissionService(CrudtestContext context, IMapper mapper)
+        public PermissionService(SaminaDbContext context, IMapper mapper)
         {
             _context = context;
             _mapper = mapper;
@@ -27,9 +28,9 @@ namespace Infrastructure.Authentication.Permission
         {
             // return new HashSet<string> { "1", "2" };
             var userPermissions = _context.AccessControlLists
-      .Where(acl => acl.Role.Users.Any(u => u.Id == userId))
-      .Select(acl => acl.Permission.Id.ToString())
-      .ToHashSet();
+              .Where(acl => acl.Role.Users.Any(u => u.Id == userId))
+              .Select(acl => acl.Permission.Id.ToString())
+              .ToHashSet();
 
             return userPermissions;
         }

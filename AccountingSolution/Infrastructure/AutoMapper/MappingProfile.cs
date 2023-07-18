@@ -2,7 +2,7 @@
 using Domain.Model.Customer;
 using Domain.Model.User;
 using Infrastructure.Persistence.Entities;
-using Infrastructure.Persistence.Entities.CrudTest;
+using Infrastructure.Persistence.Entities.Accounting;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,10 +15,9 @@ namespace Infrastructure.AutoMapper
     {
         public MappingProfile()
         {
-            CreateMap<Customer, CustomerModel>();
-            CreateMap<CustomerModel, Customer>();
-            CreateMap<UserModel, User>();
-            CreateMap<User, UserModel>();
+         
+        
+        
             CreateMap<RefreshToken, RefreshTokenModel>();
             CreateMap<RefreshTokenModel, RefreshToken>();
 
