@@ -30,10 +30,10 @@ namespace Infrastructure.Authentication.Permission
 
         
             var userPermissions = _context.BranchUsers
-                  .Where(bu => bu.UserId == userId)
+                  .Where(bu => bu.UserId == userId && bu.IsDefault)
                   .Join(_context.Roles, bu => bu.RoleId, r => r.Id, (bu, r) => r)
                   .SelectMany(r => r.AccessControlLists)
-                  .Select(acl => acl.Permission.PermissionType)
+                  .Select(acl => acl.Permission.Id.ToString())
                   .ToHashSet();
 
             return userPermissions;
