@@ -17,7 +17,7 @@ using Microsoft.AspNetCore.Authorization;
 using Infrastructure.Authentication.Permission;
 using System.Collections;
 using Domain.Interface.Jwt;
-using Infrastructure.Persistence.Entities.Accounting;
+using Infrastructure.Persistence.Entities.Samina;
 
 namespace Infrastructure
 {
@@ -33,7 +33,7 @@ namespace Infrastructure
 
             services.AddDbContext<SaminaDbContext>(options =>
             {
-                object p = options.UseSqlServer("Data Source=DESKTOP-LJH87UL;Initial Catalog=CRUDTEST;Integrated Security=True;Trusted_Connection=false; Encrypt=False;User ID=sa;Password=123456");
+                object p = options.UseSqlServer("Data Source=DESKTOP-LJH87UL;Initial Catalog=SaminaDB;Integrated Security=True;Trusted_Connection=false; Encrypt=False;User ID=sa;Password=123456");
                 ////  options.UseSqlServer(nooshDarooConnectionString);
                 options.EnableSensitiveDataLogging();
 

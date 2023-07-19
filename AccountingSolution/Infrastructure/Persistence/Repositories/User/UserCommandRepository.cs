@@ -3,7 +3,7 @@ using Azure.Core;
 using Domain.Interface.User;
 using Domain.Model.User;
 using Infrastructure.Persistence.Entities;
-using Infrastructure.Persistence.Entities.Accounting;
+using Infrastructure.Persistence.Entities.Samina;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;

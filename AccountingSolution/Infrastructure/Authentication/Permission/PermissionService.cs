@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using Domain.Interface.User;
 using Domain.Model.User;
-using Infrastructure.Persistence.Entities.Accounting;
+using Infrastructure.Persistence.Entities.Samina;
 
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -27,10 +27,14 @@ namespace Infrastructure.Authentication.Permission
         public async Task<HashSet<string>> GetPermissionsAsync(long userId)
         {
             // return new HashSet<string> { "1", "2" };
-            var userPermissions = _context.AccessControlLists
-              .Where(acl => acl.Role.Users.Any(u => u.Id == userId))
-              .Select(acl => acl.Permission.Id.ToString())
-              .ToHashSet();
+
+        
+            var userPermissions = _context.BranchUsers
+                  .Where(bu => bu.UserId == userId)
+                  .Join(_context.Roles, bu => bu.RoleId, r => r.Id, (bu, r) => r)
+                  .SelectMany(r => r.AccessControlLists)
+                  .Select(acl => acl.Permission.PermissionType)
+                  .ToHashSet();
 
             return userPermissions;
         }

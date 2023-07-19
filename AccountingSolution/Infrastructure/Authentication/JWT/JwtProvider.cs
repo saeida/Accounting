@@ -43,8 +43,8 @@ namespace Infrastructure.Authentication.JWT
              {
                 new Claim(ClaimTypes.Name, user.Username),
                 new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
-                new Claim(ClaimTypes.Email, user.Email),
-                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
+                user.Email != null ? new Claim(ClaimTypes.Email, user.Email) : new Claim(ClaimTypes.Email, ""),
+                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
 
             };
 

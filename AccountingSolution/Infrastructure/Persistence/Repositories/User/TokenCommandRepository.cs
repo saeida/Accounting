@@ -12,7 +12,7 @@ using Domain.Interface.User;
 using Domain.Model.User;
 
 using Domain.Model.Customer;
-using Infrastructure.Persistence.Entities.Accounting;
+using Infrastructure.Persistence.Entities.Samina;
 
 namespace Infrastructure.Persistence.Repositories.User
 {

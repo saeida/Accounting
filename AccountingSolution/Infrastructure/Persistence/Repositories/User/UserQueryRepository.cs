@@ -3,7 +3,7 @@ using Domain.Interface.User;
 using Domain.Model.Customer;
 using Domain.Model.User;
 using Infrastructure.Persistence.Entities;
-using Infrastructure.Persistence.Entities.Accounting;
+using Infrastructure.Persistence.Entities.Samina;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;

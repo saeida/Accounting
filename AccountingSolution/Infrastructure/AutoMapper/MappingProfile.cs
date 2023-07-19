@@ -2,7 +2,7 @@
 using Domain.Model.Customer;
 using Domain.Model.User;
 using Infrastructure.Persistence.Entities;
-using Infrastructure.Persistence.Entities.Accounting;
+using Infrastructure.Persistence.Entities.Samina;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,11 +15,13 @@ namespace Infrastructure.AutoMapper
     {
         public MappingProfile()
         {
-         
-        
-        
+
+            CreateMap<User, UserModel>();
+            CreateMap<UserModel, User>();
             CreateMap<RefreshToken, RefreshTokenModel>();
             CreateMap<RefreshTokenModel, RefreshToken>();
+
+
 
         }
     }
