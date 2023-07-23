@@ -33,7 +33,9 @@ namespace Infrastructure
 
             services.AddDbContext<SaminaDbContext>(options =>
             {
-                object p = options.UseSqlServer("Data Source=DESKTOP-LJH87UL;Initial Catalog=SaminaDB;Integrated Security=True;Trusted_Connection=false; Encrypt=False;User ID=sa;Password=123456");
+                //  object p = options.UseSqlServer("Data Source=DESKTOP-LJH87UL;Initial Catalog=SaminaDB;Integrated Security=True;Trusted_Connection=false; Encrypt=False;User ID=sa;Password=123456");
+                
+                object p = options.UseSqlServer("Data Source=62.60.130.138\\SAMINA;Initial Catalog=SaminaDB;Integrated Security=True;Trusted_Connection=false; Encrypt=False;User ID=sa;Password=Mh123456@");
                 ////  options.UseSqlServer(nooshDarooConnectionString);
                 options.EnableSensitiveDataLogging();
 

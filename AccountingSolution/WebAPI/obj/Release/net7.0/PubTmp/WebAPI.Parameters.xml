@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="SaminaAPI" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^F:\\project\\Mohsen\\Accounting\\AccountingSolution\\WebAPI\\obj\\Release\\net7\.0\\PubTmp\\Out\\$" />
+  </parameter>
+</parameters>
