@@ -1,4 +1,4 @@
-﻿using Domain.Model.Customer;
+﻿using Core.Model.Customer; // Changed to Core.Model.Customer
 using System;
 using System.Collections.Generic;
 using System.Linq;

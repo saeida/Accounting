@@ -1,7 +1,7 @@
 ﻿
 using AutoMapper;
 using Domain.Interface.Customer;
-using Domain.Model.Customer;
+using Core.Model.Customer; // Changed to Core.Model.Customer
 using Infrastructure.Persistence.Entities;
 using Infrastructure.Persistence.Entities.CrudTest;
 using System;
@@ -56,8 +56,12 @@ namespace Infrastructure.Persistence.Repositories.Customer
         {
             var tempResult = _context.Customers.Where(x => x.Id == id).SingleOrDefault();
 
+            if (tempResult == null)
+            {
+                return null; // Or throw not found exception
+            }
 
-            CustomerModel result = new CustomerModel();
+            CustomerModel result = new CustomerModel(); // This will now be Core.Model.Customer.CustomerModel
             result.Id = tempResult.Id;
             result.Firstname = tempResult.Firstname;
             result.Lastname = tempResult.Lastname;

@@ -1,5 +1,5 @@
 ﻿
-using Domain.Model.Customer;
+using Core.Model.Customer; // Corrected namespace
 using MediatR;
 using System;
 using System.Collections.Generic;

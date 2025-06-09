@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using Core.Model.Customer; // Added for CustomerModel
+using MediatR;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Application.Customer.Commands.CreateCustomer
 {
-    public class CreateCustomerCommand : IRequest<Int64>
+    public class CreateCustomerCommand : IRequest<CustomerModel> // Changed return type to CustomerModel
     {
         public string Firstname { get; set; }
         public string Lastname { get; set; }
