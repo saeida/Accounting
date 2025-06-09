@@ -1,35 +1,33 @@
 {
   "format": 1,
   "restore": {
-    "F:\\project\\Mohsen\\Accounting\\AccountingSolution\\WebAPI\\WebAPI.csproj": {}
+    "/app/AccountingSolution/WebAPI/WebAPI.csproj": {}
   },
   "projects": {
-    "F:\\project\\Mohsen\\Accounting\\AccountingSolution\\Application\\Application.csproj": {
+    "/app/AccountingSolution/Application/Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\project\\Mohsen\\Accounting\\AccountingSolution\\Application\\Application.csproj",
+        "projectUniqueName": "/app/AccountingSolution/Application/Application.csproj",
         "projectName": "Application",
-        "projectPath": "F:\\project\\Mohsen\\Accounting\\AccountingSolution\\Application\\Application.csproj",
-        "packagesPath": "C:\\Users\\atefi\\.nuget\\packages\\",
-        "outputPath": "F:\\project\\Mohsen\\Accounting\\AccountingSolution\\Application\\obj\\",
+        "projectPath": "/app/AccountingSolution/Application/Application.csproj",
+        "packagesPath": "/home/swebot/.nuget/packages/",
+        "outputPath": "/app/AccountingSolution/Application/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\atefi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/swebot/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "F:\\project\\Mohsen\\Accounting\\AccountingSolution\\Core\\Domain.csproj": {
-                "projectPath": "F:\\project\\Mohsen\\Accounting\\AccountingSolution\\Core\\Domain.csproj"
+              "/app/AccountingSolution/Core/Domain.csproj": {
+                "projectPath": "/app/AccountingSolution/Core/Domain.csproj"
               }
             }
           }
@@ -72,33 +70,41 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.116/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "F:\\project\\Mohsen\\Accounting\\AccountingSolution\\Core\\Domain.csproj": {
+    "/app/AccountingSolution/Core/Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\project\\Mohsen\\Accounting\\AccountingSolution\\Core\\Domain.csproj",
+        "projectUniqueName": "/app/AccountingSolution/Core/Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "F:\\project\\Mohsen\\Accounting\\AccountingSolution\\Core\\Domain.csproj",
-        "packagesPath": "C:\\Users\\atefi\\.nuget\\packages\\",
-        "outputPath": "F:\\project\\Mohsen\\Accounting\\AccountingSolution\\Core\\obj\\",
+        "projectPath": "/app/AccountingSolution/Core/Domain.csproj",
+        "packagesPath": "/home/swebot/.nuget/packages/",
+        "outputPath": "/app/AccountingSolution/Core/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\atefi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/swebot/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -127,41 +133,49 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.116/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "F:\\project\\Mohsen\\Accounting\\AccountingSolution\\Infrastructure\\Infrastructure.csproj": {
+    "/app/AccountingSolution/Infrastructure/Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\project\\Mohsen\\Accounting\\AccountingSolution\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "/app/AccountingSolution/Infrastructure/Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "F:\\project\\Mohsen\\Accounting\\AccountingSolution\\Infrastructure\\Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\atefi\\.nuget\\packages\\",
-        "outputPath": "F:\\project\\Mohsen\\Accounting\\AccountingSolution\\Infrastructure\\obj\\",
+        "projectPath": "/app/AccountingSolution/Infrastructure/Infrastructure.csproj",
+        "packagesPath": "/home/swebot/.nuget/packages/",
+        "outputPath": "/app/AccountingSolution/Infrastructure/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\atefi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/swebot/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "F:\\project\\Mohsen\\Accounting\\AccountingSolution\\Core\\Domain.csproj": {
-                "projectPath": "F:\\project\\Mohsen\\Accounting\\AccountingSolution\\Core\\Domain.csproj"
+              "/app/AccountingSolution/Core/Domain.csproj": {
+                "projectPath": "/app/AccountingSolution/Core/Domain.csproj"
               }
             }
           }
@@ -230,44 +244,52 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.116/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "F:\\project\\Mohsen\\Accounting\\AccountingSolution\\WebAPI\\WebAPI.csproj": {
+    "/app/AccountingSolution/WebAPI/WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\project\\Mohsen\\Accounting\\AccountingSolution\\WebAPI\\WebAPI.csproj",
+        "projectUniqueName": "/app/AccountingSolution/WebAPI/WebAPI.csproj",
         "projectName": "WebAPI",
-        "projectPath": "F:\\project\\Mohsen\\Accounting\\AccountingSolution\\WebAPI\\WebAPI.csproj",
-        "packagesPath": "C:\\Users\\atefi\\.nuget\\packages\\",
-        "outputPath": "F:\\project\\Mohsen\\Accounting\\AccountingSolution\\WebAPI\\obj\\",
+        "projectPath": "/app/AccountingSolution/WebAPI/WebAPI.csproj",
+        "packagesPath": "/home/swebot/.nuget/packages/",
+        "outputPath": "/app/AccountingSolution/WebAPI/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\atefi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/swebot/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "F:\\project\\Mohsen\\Accounting\\AccountingSolution\\Application\\Application.csproj": {
-                "projectPath": "F:\\project\\Mohsen\\Accounting\\AccountingSolution\\Application\\Application.csproj"
+              "/app/AccountingSolution/Application/Application.csproj": {
+                "projectPath": "/app/AccountingSolution/Application/Application.csproj"
               },
-              "F:\\project\\Mohsen\\Accounting\\AccountingSolution\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "F:\\project\\Mohsen\\Accounting\\AccountingSolution\\Infrastructure\\Infrastructure.csproj"
+              "/app/AccountingSolution/Infrastructure/Infrastructure.csproj": {
+                "projectPath": "/app/AccountingSolution/Infrastructure/Infrastructure.csproj"
               }
             }
           }
@@ -282,6 +304,14 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "HotChocolate.AspNetCore": {
+              "target": "Package",
+              "version": "[15.1.5, )"
+            },
+            "HotChocolate.Data.EntityFramework": {
+              "target": "Package",
+              "version": "[15.1.5, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[7.0.1, )"
@@ -322,6 +352,20 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.linux-x64",
+              "version": "[7.0.20, 7.0.20]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -330,7 +374,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.116/RuntimeIdentifierGraph.json"
         }
       }
     }

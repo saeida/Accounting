@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using Domain.Model.Customer;
+using Core.Model.Customer; // Changed to Core.Model.Customer
 using Domain.Model.User;
 using Infrastructure.Persistence.Entities;
 using Infrastructure.Persistence.Entities.CrudTest;

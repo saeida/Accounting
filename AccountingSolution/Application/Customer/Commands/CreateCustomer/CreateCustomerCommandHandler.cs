@@ -1,6 +1,6 @@
 ﻿
 using Domain.Interface.Customer;
-using Domain.Model.Customer;
+using Core.Model.Customer; // Changed to Core.Model.Customer
 using FluentValidation;
 using MediatR;
 using System;
@@ -15,14 +15,14 @@ using System.Threading.Tasks;
 
 namespace Application.Customer.Commands.CreateCustomer
 {
-    public class CreateCustomerCommandHandler : IRequestHandler<CreateCustomerCommand, Int64>
+    public class CreateCustomerCommandHandler : IRequestHandler<CreateCustomerCommand, CustomerModel> // Changed return type
     {
         private readonly ICustomerCommandRepository _customerRepository;
         public CreateCustomerCommandHandler(ICustomerCommandRepository customerRepository)
         {
             _customerRepository = customerRepository;
         }
-        public async Task<Int64> Handle(CreateCustomerCommand command, CancellationToken cancellationToken)
+        public async Task<CustomerModel> Handle(CreateCustomerCommand command, CancellationToken cancellationToken) // Changed return type
         {
 
             //var cultureInfo = CultureInfo.GetCultureInfo("en-US");  // یا "fa-IR" برای زبان فارسی
@@ -56,7 +56,12 @@ namespace Application.Customer.Commands.CreateCustomer
 
 
             var newCustomerId = await _customerRepository.AddAsync(cm);
-            return newCustomerId;
+
+            // Construct the CustomerModel to return
+            // This is a simplification. Ideally, AddAsync returns the full model or we re-fetch.
+            // For now, we populate from command and the new ID.
+            cm.Id = newCustomerId;
+            return cm;
         }
 
      

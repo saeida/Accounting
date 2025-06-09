@@ -1,6 +1,6 @@
 ﻿
 using Domain.Interface.Customer;
-using Domain.Model.Customer;
+using Core.Model.Customer; // Corrected namespace
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using System.Globalization;
